@@ -13,7 +13,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 # 等待时间 产生随机数
 import time
 import random
-from browsermobproxy import Server
+#from browsermobproxy import Server
 from selenium.webdriver import DesiredCapabilities
 import urllib
 import hashlib
