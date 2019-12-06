@@ -1,0 +1,881 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f540d9c7eb6, pid=6987, tid=0x00007f54123a0740
+#
+# JRE version: OpenJDK Runtime Environment (8.0_171-b11) (build 1.8.0_171-8u171-b11-2-b11)
+# Java VM: OpenJDK 64-Bit Server VM (25.171-b11 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [_jpype.cpython-36m-x86_64-linux-gnu.so+0x53eb6]  JPJavaEnv::CallVoidMethod(_jobject*, _jmethodID*)+0x26
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000000
+
+Registers:
+RAX=0x0000000000b92270, RBX=0x0000000000000000, RCX=0x0000000000000000, RDX=0x0000000000000000
+RSP=0x00007ffe054cdd70, RBP=0x00007f540dc1e2d0, RSI=0x0000000000000000, RDI=0x0000000000878580
+R8 =0x0000000000000000, R9 =0x0000000000000000, R10=0x00007f540dc2b0e8, R11=0x00007f540d99fa20
+R12=0x0000000000e0cf80, R13=0x0000000001b895a8, R14=0x00007f540c2ef6a8, R15=0x0000000000000000
+RIP=0x00007f540d9c7eb6, EFLAGS=0x0000000000010202, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007ffe054cdd70)
+0x00007ffe054cdd70:   00000000007cb2c0 0000000000000000
+0x00007ffe054cdd80:   00007f540dc1e2d0 00007ffe054cdeb0
+0x00007ffe054cdd90:   00007f540c2ef6a0 00007f540d99fa2f
+0x00007ffe054cdda0:   0000000000000000 0000000000511041
+0x00007ffe054cddb0:   000000000056d040 00007f540dc019e0
+0x00007ffe054cddc0:   00000000007c7340 000000000053fa56
+0x00007ffe054cddd0:   00000000004c5fc0 00007f541202d490
+0x00007ffe054cdde0:   00000000007d84e0 00000000016647d0
+0x00007ffe054cddf0:   6174733a4f4f7c4f 00007f540c2ef6a8
+0x00007ffe054cde00:   0000000000b92270 00007f540d78dec6
+0x00007ffe054cde10:   00007f540c2ef528 0000000000000000
+0x00007ffe054cde20:   0000000000000000 0000000000514629
+0x00007ffe054cde30:   0000000000000000 00007f540d78dec0
+0x00007ffe054cde40:   00007f540c2ef6a0 00007f540d7af348
+0x00007ffe054cde50:   00007f540dc2b0e8 00007f540d7b1390
+0x00007ffe054cde60:   00007f540d7aea50 0000000000510f88
+0x00007ffe054cde70:   00007f540c2ef6a0 ffffffffffffffff
+0x00007ffe054cde80:   00007f5412097048 00000000007d6400
+0x00007ffe054cde90:   00000000007cb2c0 00007f540d7ac458
+0x00007ffe054cdea0:   0000000000000002 0000000000588d8a
+0x00007ffe054cdeb0:   00007f540c2ef6a8 00007f541207fef0
+0x00007ffe054cdec0:   00007f540d7abcf0 00000000007d6400
+0x00007ffe054cded0:   0000000000000000 00007f540d7abcf0
+0x00007ffe054cdee0:   0000000001baf2e8 0000000000588d8a
+0x00007ffe054cdef0:   0000000000000000 000000000057c5f0
+0x00007ffe054cdf00:   00000000016647a0 00007f540c2ef528
+0x00007ffe054cdf10:   00000000007d69a0 0000000000000004
+0x00007ffe054cdf20:   0000000000b919d0 00007f540c2ef6a0
+0x00007ffe054cdf30:   0000000000b92270 00000000005101b8
+0x00007ffe054cdf40:   0000000000b92270 00007f540c2da738
+0x00007ffe054cdf50:   0000000000000000 00007f54120a53e8
+0x00007ffe054cdf60:   00000000007cb2c0 0000000000000000 
+
+Instructions: (pc=0x00007f540d9c7eb6)
+0x00007f540d9c7e96:   d5 55 53 49 89 f4 48 83 ec 08 e8 8b 11 00 00 48
+0x00007f540d9c7ea6:   89 c3 e8 d3 34 00 00 48 8b 10 48 89 c7 ff 52 30
+0x00007f540d9c7eb6:   48 8b 0b 4c 89 ea 4c 89 e6 48 89 df 48 89 c5 31
+0x00007f540d9c7ec6:   c0 ff 91 e8 01 00 00 e8 ae 34 00 00 48 8b 10 48 
+
+Register to memory mapping:
+
+RAX=0x0000000000b92270 is an unknown value
+RBX=0x0000000000000000 is an unknown value
+RCX=0x0000000000000000 is an unknown value
+RDX=0x0000000000000000 is an unknown value
+RSP=0x00007ffe054cdd70 is an unknown value
+RBP=0x00007f540dc1e2d0 is an unknown value
+RSI=0x0000000000000000 is an unknown value
+RDI=0x0000000000878580: <offset 0x478580> in /usr/bin/python3.6 at 0x0000000000400000
+R8 =0x0000000000000000 is an unknown value
+R9 =0x0000000000000000 is an unknown value
+R10=0x00007f540dc2b0e8 is an unknown value
+R11=0x00007f540d99fa20: _ZN11JPypeModule18stopReferenceQueueEP7_object+0 in /usr/lib/python3/dist-packages/_jpype.cpython-36m-x86_64-linux-gnu.so at 0x00007f540d974000
+R12=0x0000000000e0cf80 is a global jni handle
+R13=0x0000000001b895a8 is an unknown value
+R14=0x00007f540c2ef6a8 is an unknown value
+R15=0x0000000000000000 is an unknown value
+
+
+Stack: [0x00007ffe053d3000,0x00007ffe054d3000],  sp=0x00007ffe054cdd70,  free space=1003k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [_jpype.cpython-36m-x86_64-linux-gnu.so+0x53eb6]  JPJavaEnv::CallVoidMethod(_jobject*, _jmethodID*)+0x26
+
+
+---------------  P R O C E S S  ---------------
+
+VM state:at safepoint (shutting down)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00000000013cfe30] Threads_lock - owner thread: 0x0000000001b3b800
+
+Heap:
+ PSYoungGen      total 37888K, used 3293K [0x00000000d6900000, 0x00000000d9300000, 0x0000000100000000)
+  eden space 32768K, 10% used [0x00000000d6900000,0x00000000d6c37590,0x00000000d8900000)
+  from space 5120K, 0% used [0x00000000d8e00000,0x00000000d8e00000,0x00000000d9300000)
+  to   space 5120K, 0% used [0x00000000d8900000,0x00000000d8900000,0x00000000d8e00000)
+ ParOldGen       total 86016K, used 0K [0x0000000083a00000, 0x0000000088e00000, 0x00000000d6900000)
+  object space 86016K, 0% used [0x0000000083a00000,0x0000000083a00000,0x0000000088e00000)
+ Metaspace       used 3912K, capacity 4716K, committed 4864K, reserved 1056768K
+  class space    used 428K, capacity 468K, committed 512K, reserved 1048576K
+
+Card table byte_map: [0x00007f53fb54b000,0x00007f53fb92f000] byte_map_base: 0x00007f53fb12e000
+
+Marking Bits: (ParMarkBitMap*) 0x00007f540c2af140
+ Begin Bits: [0x00007f53f707f000, 0x00007f53f8f97000)
+ End Bits:   [0x00007f53f8f97000, 0x00007f53faeaf000)
+
+Polling page: 0x00007f54109e2000
+
+CodeCache: size=245760Kb used=1418Kb max_used=1418Kb free=244342Kb
+ bounds [0x00007f53fbcef000, 0x00007f53fbf5f000, 0x00007f540acef000]
+ total_blobs=439 nmethods=172 adapters=182
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 0.645 Thread 0x0000000001b76800  168       1       java.net.URL::getFile (5 bytes)
+Event: 0.645 Thread 0x0000000001b76800 nmethod 168 0x00007f53fbe504d0 code [0x00007f53fbe50620, 0x00007f53fbe50730]
+Event: 0.647 Thread 0x0000000001b76800  169       3       java.nio.Buffer::checkIndex (22 bytes)
+Event: 0.648 Thread 0x0000000001b76800 nmethod 169 0x00007f53fbe50d90 code [0x00007f53fbe50f00, 0x00007f53fbe51148]
+Event: 0.648 Thread 0x0000000001b76800  170       3       java.nio.DirectLongBufferU::ix (10 bytes)
+Event: 0.648 Thread 0x0000000001b76800 nmethod 170 0x00007f53fbe51210 code [0x00007f53fbe51360, 0x00007f53fbe514d0]
+Event: 0.650 Thread 0x0000000001b76800  171       3       java.util.zip.ZStreamRef::address (5 bytes)
+Event: 0.650 Thread 0x0000000001b76800 nmethod 171 0x00007f53fbe51550 code [0x00007f53fbe516a0, 0x00007f53fbe517f0]
+Event: 0.650 Thread 0x0000000001b76800  172       3       java.lang.AbstractStringBuilder::append (29 bytes)
+Event: 0.651 Thread 0x0000000001b76800 nmethod 172 0x00007f53fbe51850 code [0x00007f53fbe51a00, 0x00007f53fbe51f18]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (4 events):
+Event: 0.022 Thread 0x0000000001902000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x00000000d6907cb0) thrown at [/build/openjdk-8-WSaTOi/openjdk-8-8u171-b11/src/hotspot/src/share/vm/
+Event: 0.022 Thread 0x0000000001902000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x00000000d6907f98) thrown at [/build/openjdk-8-WSaTOi/openjdk-8-8u171-b11/src/hotspot/src/share/vm/prims/jni.cpp, lin
+Event: 0.526 Thread 0x0000000001902000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d6b9a748) thrown at [/build/openjdk-8-WSaTOi/openjdk-8-8u171-b11/src/hotspot/src/share/vm/prims/jvm.cpp, line 1435]
+Event: 0.526 Thread 0x0000000001902000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d6b9a958) thrown at [/build/openjdk-8-WSaTOi/openjdk-8-8u171-b11/src/hotspot/src/share/vm/prims/jvm.cpp, line 1435]
+
+Events (10 events):
+Event: 0.648 loading class javax/crypto/NullCipher
+Event: 0.648 loading class javax/crypto/NullCipher done
+Event: 0.649 loading class mybase64
+Event: 0.649 loading class mybase64 done
+Event: 0.840 Thread 0x0000000001bc6000 Thread exited: 0x0000000001bc6000
+Event: 0.840 loading class java/lang/Shutdown
+Event: 0.840 loading class java/lang/Shutdown done
+Event: 0.840 loading class java/lang/Shutdown$Lock
+Event: 0.840 loading class java/lang/Shutdown$Lock done
+Event: 0.843 Thread 0x0000000001902000 Thread exited: 0x0000000001902000
+
+
+Dynamic libraries:
+00400000-0041f000 r--p 00000000 08:01 1050625                            /usr/bin/python3.6
+0041f000-0063c000 r-xp 0001f000 08:01 1050625                            /usr/bin/python3.6
+0063c000-007b7000 r--p 0023c000 08:01 1050625                            /usr/bin/python3.6
+007b7000-007b8000 r--p 003b6000 08:01 1050625                            /usr/bin/python3.6
+007b8000-00855000 rw-p 003b7000 08:01 1050625                            /usr/bin/python3.6
+00855000-00888000 rw-p 00000000 00:00 0 
+00b8c000-01d01000 rw-p 00000000 00:00 0                                  [heap]
+83a00000-88e00000 rw-p 00000000 00:00 0 
+88e00000-d6900000 ---p 00000000 00:00 0 
+d6900000-d9300000 rw-p 00000000 00:00 0 
+d9300000-100000000 ---p 00000000 00:00 0 
+100000000-100080000 rw-p 00000000 00:00 0 
+100080000-140000000 ---p 00000000 00:00 0 
+7f53ba7ff000-7f53bc000000 rw-p 00000000 00:00 0 
+7f53bc000000-7f53bc021000 rw-p 00000000 00:00 0 
+7f53bc021000-7f53c0000000 ---p 00000000 00:00 0 
+7f53c0000000-7f53c0021000 rw-p 00000000 00:00 0 
+7f53c0021000-7f53c4000000 ---p 00000000 00:00 0 
+7f53c4000000-7f53c4106000 rw-p 00000000 00:00 0 
+7f53c4106000-7f53c8000000 ---p 00000000 00:00 0 
+7f53c8000000-7f53c8021000 rw-p 00000000 00:00 0 
+7f53c8021000-7f53cc000000 ---p 00000000 00:00 0 
+7f53cc000000-7f53cc08b000 rw-p 00000000 00:00 0 
+7f53cc08b000-7f53d0000000 ---p 00000000 00:00 0 
+7f53d0000000-7f53d006b000 rw-p 00000000 00:00 0 
+7f53d006b000-7f53d4000000 ---p 00000000 00:00 0 
+7f53d4000000-7f53d4021000 rw-p 00000000 00:00 0 
+7f53d4021000-7f53d8000000 ---p 00000000 00:00 0 
+7f53d8000000-7f53d8021000 rw-p 00000000 00:00 0 
+7f53d8021000-7f53dc000000 ---p 00000000 00:00 0 
+7f53dc000000-7f53dc021000 rw-p 00000000 00:00 0 
+7f53dc021000-7f53e0000000 ---p 00000000 00:00 0 
+7f53e0000000-7f53e0021000 rw-p 00000000 00:00 0 
+7f53e0021000-7f53e4000000 ---p 00000000 00:00 0 
+7f53e4000000-7f53e4021000 rw-p 00000000 00:00 0 
+7f53e4021000-7f53e8000000 ---p 00000000 00:00 0 
+7f53e8000000-7f53e8021000 rw-p 00000000 00:00 0 
+7f53e8021000-7f53ec000000 ---p 00000000 00:00 0 
+7f53ec000000-7f53ec021000 rw-p 00000000 00:00 0 
+7f53ec021000-7f53f0000000 ---p 00000000 00:00 0 
+7f53f0000000-7f53f0021000 rw-p 00000000 00:00 0 
+7f53f0021000-7f53f4000000 ---p 00000000 00:00 0 
+7f53f427a000-7f53f42fa000 rw-p 00000000 00:00 0 
+7f53f42fa000-7f53f4322000 r-xp 00000000 08:01 1205624                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libsunec.so
+7f53f4322000-7f53f4521000 ---p 00028000 08:01 1205624                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libsunec.so
+7f53f4521000-7f53f4525000 r--p 00027000 08:01 1205624                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libsunec.so
+7f53f4525000-7f53f4526000 rw-p 0002b000 08:01 1205624                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libsunec.so
+7f53f4526000-7f53f453c000 r-xp 00000000 08:01 1205619                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f53f453c000-7f53f473c000 ---p 00016000 08:01 1205619                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f53f473c000-7f53f473d000 r--p 00016000 08:01 1205619                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f53f473d000-7f53f473e000 rw-p 00017000 08:01 1205619                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f53f473e000-7f53f474f000 r-xp 00000000 08:01 1205620                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f53f474f000-7f53f494f000 ---p 00011000 08:01 1205620                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f53f494f000-7f53f4950000 r--p 00011000 08:01 1205620                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f53f4950000-7f53f4951000 rw-p 00012000 08:01 1205620                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f53f4951000-7f53f4956000 r--s 0009d000 08:01 1205754                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar
+7f53f4956000-7f53f4958000 r--s 00016000 08:01 1205752                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar
+7f53f4958000-7f53f495f000 r--s 0004d000 08:01 4359828                    /opt/project/qdReader/libs/testDes3Cbc.jar
+7f53f495f000-7f53f4965000 r--s 0003b000 08:01 1205648                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+7f53f4965000-7f53f496f000 r--s 00116000 08:01 1205645                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/localedata.jar
+7f53f496f000-7f53f4972000 r--s 00038000 08:01 1205649                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+7f53f4972000-7f53f498d000 r--s 001d6000 08:01 1205646                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/nashorn.jar
+7f53f498d000-7f53f4990000 ---p 00000000 00:00 0 
+7f53f4990000-7f53f4a8e000 rw-p 00000000 00:00 0 
+7f53f4a8e000-7f53f4a8f000 ---p 00000000 00:00 0 
+7f53f4a8f000-7f53f4b8f000 rw-p 00000000 00:00 0 
+7f53f4b8f000-7f53f4b92000 ---p 00000000 00:00 0 
+7f53f4b92000-7f53f4c90000 rw-p 00000000 00:00 0 
+7f53f4c90000-7f53f4c91000 ---p 00000000 00:00 0 
+7f53f4c91000-7f53f4c94000 ---p 00000000 00:00 0 
+7f53f4c94000-7f53f4d91000 rw-p 00000000 00:00 0 
+7f53f4d91000-7f53f4d92000 ---p 00000000 00:00 0 
+7f53f4d92000-7f53f4d95000 ---p 00000000 00:00 0 
+7f53f4d95000-7f53f4e92000 rw-p 00000000 00:00 0 
+7f53f4e92000-7f53f4e93000 ---p 00000000 00:00 0 
+7f53f4e93000-7f53f4e96000 ---p 00000000 00:00 0 
+7f53f4e96000-7f53f4f93000 rw-p 00000000 00:00 0 
+7f53f4f93000-7f53f4f96000 ---p 00000000 00:00 0 
+7f53f4f96000-7f53f5094000 rw-p 00000000 00:00 0 
+7f53f5094000-7f53f5097000 ---p 00000000 00:00 0 
+7f53f5097000-7f53f5195000 rw-p 00000000 00:00 0 
+7f53f5195000-7f53f5198000 ---p 00000000 00:00 0 
+7f53f5198000-7f53f5296000 rw-p 00000000 00:00 0 
+7f53f5296000-7f53f5297000 ---p 00000000 00:00 0 
+7f53f5297000-7f53f62a6000 rw-p 00000000 00:00 0 
+7f53f62a6000-7f53f6475000 r--s 03c2f000 08:01 1205759                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar
+7f53f6475000-7f53f68b5000 rw-p 00000000 00:00 0 
+7f53f68b5000-7f53f6c75000 ---p 00000000 00:00 0 
+7f53f6c75000-7f53faeaf000 rw-p 00000000 00:00 0 
+7f53faeaf000-7f53faeb0000 ---p 00000000 00:00 0 
+7f53faeb0000-7f53fafb0000 rw-p 00000000 00:00 0 
+7f53fafb0000-7f53fafb1000 ---p 00000000 00:00 0 
+7f53fafb1000-7f53fb0b1000 rw-p 00000000 00:00 0 
+7f53fb0b1000-7f53fb0b2000 ---p 00000000 00:00 0 
+7f53fb0b2000-7f53fb1b2000 rw-p 00000000 00:00 0 
+7f53fb1b2000-7f53fb1b3000 ---p 00000000 00:00 0 
+7f53fb1b3000-7f53fb2b3000 rw-p 00000000 00:00 0 
+7f53fb2b3000-7f53fb2dd000 rw-p 00000000 00:00 0 
+7f53fb2dd000-7f53fb54b000 ---p 00000000 00:00 0 
+7f53fb54b000-7f53fb575000 rw-p 00000000 00:00 0 
+7f53fb575000-7f53fb7e2000 ---p 00000000 00:00 0 
+7f53fb7e2000-7f53fb7f8000 rw-p 00000000 00:00 0 
+7f53fb7f8000-7f53fb92e000 ---p 00000000 00:00 0 
+7f53fb92e000-7f53fb939000 rw-p 00000000 00:00 0 
+7f53fb939000-7f53fbcef000 ---p 00000000 00:00 0 
+7f53fbcef000-7f53fbf5f000 rwxp 00000000 00:00 0 
+7f53fbf5f000-7f540acef000 ---p 00000000 00:00 0 
+7f540acef000-7f540acf7000 r-xp 00000000 08:01 1205627                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f540acf7000-7f540aef6000 ---p 00008000 08:01 1205627                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f540aef6000-7f540aef7000 r--p 00007000 08:01 1205627                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f540aef7000-7f540aef8000 rw-p 00008000 08:01 1205627                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f540aef8000-7f540aefb000 r--p 00000000 08:01 1185635                    /usr/lib/x86_64-linux-gnu/libnss_files-2.28.so
+7f540aefb000-7f540af02000 r-xp 00003000 08:01 1185635                    /usr/lib/x86_64-linux-gnu/libnss_files-2.28.so
+7f540af02000-7f540af04000 r--p 0000a000 08:01 1185635                    /usr/lib/x86_64-linux-gnu/libnss_files-2.28.so
+7f540af04000-7f540af05000 ---p 0000c000 08:01 1185635                    /usr/lib/x86_64-linux-gnu/libnss_files-2.28.so
+7f540af05000-7f540af06000 r--p 0000c000 08:01 1185635                    /usr/lib/x86_64-linux-gnu/libnss_files-2.28.so
+7f540af06000-7f540af07000 rw-p 0000d000 08:01 1185635                    /usr/lib/x86_64-linux-gnu/libnss_files-2.28.so
+7f540af07000-7f540af0d000 rw-p 00000000 00:00 0 
+7f540af0d000-7f540af3b000 r-xp 00000000 08:01 1205608                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f540af3b000-7f540b13a000 ---p 0002e000 08:01 1205608                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f540b13a000-7f540b13b000 r--p 0002d000 08:01 1205608                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f540b13b000-7f540b13d000 rw-p 0002e000 08:01 1205608                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f540b13d000-7f540b14d000 r-xp 00000000 08:01 1205626                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f540b14d000-7f540b34c000 ---p 00010000 08:01 1205626                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f540b34c000-7f540b34e000 r--p 0000f000 08:01 1205626                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f540b34e000-7f540b34f000 rw-p 00011000 08:01 1205626                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f540b34f000-7f540bfe0000 r-xp 00000000 08:01 1205630                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f540bfe0000-7f540c1e0000 ---p 00c91000 08:01 1205630                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f540c1e0000-7f540c273000 r--p 00c91000 08:01 1205630                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f540c273000-7f540c29b000 rw-p 00d24000 08:01 1205630                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f540c29b000-7f540c2cc000 rw-p 00000000 00:00 0 
+7f540c2cc000-7f540c34c000 rw-p 00000000 00:00 0 
+7f540c34c000-7f540c3c8000 r--p 00000000 08:01 4359523                    /opt/project/qdReader/libs/libcrypto.so.3
+7f540c3c8000-7f540c58d000 r-xp 0007c000 08:01 4359523                    /opt/project/qdReader/libs/libcrypto.so.3
+7f540c58d000-7f540c61f000 r--p 00241000 08:01 4359523                    /opt/project/qdReader/libs/libcrypto.so.3
+7f540c61f000-7f540c620000 ---p 002d3000 08:01 4359523                    /opt/project/qdReader/libs/libcrypto.so.3
+7f540c620000-7f540c64e000 r--p 002d3000 08:01 4359523                    /opt/project/qdReader/libs/libcrypto.so.3
+7f540c64e000-7f540c651000 rw-p 00301000 08:01 4359523                    /opt/project/qdReader/libs/libcrypto.so.3
+7f540c651000-7f540c654000 rw-p 00000000 00:00 0 
+7f540c654000-7f540c694000 rw-p 00000000 00:00 0 
+7f540c694000-7f540c6a3000 r--p 00000000 08:01 1201696                    /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+7f540c6a3000-7f540c77c000 r-xp 0000f000 08:01 1201696                    /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+7f540c77c000-7f540c7ae000 r--p 000e8000 08:01 1201696                    /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+7f540c7ae000-7f540c7b2000 r--p 00119000 08:01 1201696                    /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+7f540c7b2000-7f540c7b5000 rw-p 0011d000 08:01 1201696                    /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+7f540c7b5000-7f540c7b7000 r--p 00000000 08:01 2235426                    /usr/lib/python3/dist-packages/_brotli.cpython-36m-x86_64-linux-gnu.so
+7f540c7b7000-7f540c7fd000 r-xp 00002000 08:01 2235426                    /usr/lib/python3/dist-packages/_brotli.cpython-36m-x86_64-linux-gnu.so
+7f540c7fd000-7f540c86b000 r--p 00048000 08:01 2235426                    /usr/lib/python3/dist-packages/_brotli.cpython-36m-x86_64-linux-gnu.so
+7f540c86b000-7f540c86c000 ---p 000b6000 08:01 2235426                    /usr/lib/python3/dist-packages/_brotli.cpython-36m-x86_64-linux-gnu.so
+7f540c86c000-7f540c86d000 r--p 000b6000 08:01 2235426                    /usr/lib/python3/dist-packages/_brotli.cpython-36m-x86_64-linux-gnu.so
+7f540c86d000-7f540c86f000 rw-p 000b7000 08:01 2235426                    /usr/lib/python3/dist-packages/_brotli.cpython-36m-x86_64-linux-gnu.so
+7f540c86f000-7f540ceef000 rw-p 00000000 00:00 0 
+7f540ceef000-7f540cefa000 r-xp 00000000 08:01 1185000                    /usr/lib/x86_64-linux-gnu/libjbig.so.0
+7f540cefa000-7f540d0f9000 ---p 0000b000 08:01 1185000                    /usr/lib/x86_64-linux-gnu/libjbig.so.0
+7f540d0f9000-7f540d0fa000 r--p 0000a000 08:01 1185000                    /usr/lib/x86_64-linux-gnu/libjbig.so.0
+7f540d0fa000-7f540d0fd000 rw-p 0000b000 08:01 1185000                    /usr/lib/x86_64-linux-gnu/libjbig.so.0
+7f540d0fd000-7f540d102000 r--p 00000000 08:01 1186186                    /usr/lib/x86_64-linux-gnu/libzstd.so.1.3.8
+7f540d102000-7f540d18a000 r-xp 00005000 08:01 1186186                    /usr/lib/x86_64-linux-gnu/libzstd.so.1.3.8
+7f540d18a000-7f540d19a000 r--p 0008d000 08:01 1186186                    /usr/lib/x86_64-linux-gnu/libzstd.so.1.3.8
+7f540d19a000-7f540d19b000 ---p 0009d000 08:01 1186186                    /usr/lib/x86_64-linux-gnu/libzstd.so.1.3.8
+7f540d19b000-7f540d19c000 r--p 0009d000 08:01 1186186                    /usr/lib/x86_64-linux-gnu/libzstd.so.1.3.8
+7f540d19c000-7f540d19d000 rw-p 0009e000 08:01 1186186                    /usr/lib/x86_64-linux-gnu/libzstd.so.1.3.8
+7f540d19d000-7f540d203000 r-xp 00000000 08:01 1185999                    /usr/lib/x86_64-linux-gnu/libwebp.so.6.0.2
+7f540d203000-7f540d402000 ---p 00066000 08:01 1185999                    /usr/lib/x86_64-linux-gnu/libwebp.so.6.0.2
+7f540d402000-7f540d403000 r--p 00065000 08:01 1185999                    /usr/lib/x86_64-linux-gnu/libwebp.so.6.0.2
+7f540d403000-7f540d404000 rw-p 00066000 08:01 1185999                    /usr/lib/x86_64-linux-gnu/libwebp.so.6.0.2
+7f540d404000-7f540d406000 rw-p 00000000 00:00 0 
+7f540d406000-7f540d40f000 r--p 00000000 08:01 1185513                    /usr/lib/x86_64-linux-gnu/libtiff.so.5.4.0
+7f540d40f000-7f540d452000 r-xp 00009000 08:01 1185513                    /usr/lib/x86_64-linux-gnu/libtiff.so.5.4.0
+7f540d452000-7f540d480000 r--p 0004c000 08:01 1185513                    /usr/lib/x86_64-linux-gnu/libtiff.so.5.4.0
+7f540d480000-7f540d484000 r--p 00079000 08:01 1185513                    /usr/lib/x86_64-linux-gnu/libtiff.so.5.4.0
+7f540d484000-7f540d485000 rw-p 0007d000 08:01 1185513                    /usr/lib/x86_64-linux-gnu/libtiff.so.5.4.0
+7f540d485000-7f540d4ec000 r-xp 00000000 08:01 1185005                    /usr/lib/x86_64-linux-gnu/libjpeg.so.62.2.0
+7f540d4ec000-7f540d6ec000 ---p 00067000 08:01 1185005                    /usr/lib/x86_64-linux-gnu/libjpeg.so.62.2.0
+7f540d6ec000-7f540d6ed000 r--p 00067000 08:01 1185005                    /usr/lib/x86_64-linux-gnu/libjpeg.so.62.2.0
+7f540d6ed000-7f540d6ee000 rw-p 00068000 08:01 1185005                    /usr/lib/x86_64-linux-gnu/libjpeg.so.62.2.0
+7f540d6ee000-7f540d6fe000 r--p 00000000 08:01 2490516                    /usr/lib/python3/dist-packages/PIL/_imaging.cpython-36m-x86_64-linux-gnu.so
+7f540d6fe000-7f540d735000 r-xp 00010000 08:01 2490516                    /usr/lib/python3/dist-packages/PIL/_imaging.cpython-36m-x86_64-linux-gnu.so
+7f540d735000-7f540d743000 r--p 00047000 08:01 2490516                    /usr/lib/python3/dist-packages/PIL/_imaging.cpython-36m-x86_64-linux-gnu.so
+7f540d743000-7f540d746000 r--p 00054000 08:01 2490516                    /usr/lib/python3/dist-packages/PIL/_imaging.cpython-36m-x86_64-linux-gnu.so
+7f540d746000-7f540d74a000 rw-p 00057000 08:01 2490516                    /usr/lib/python3/dist-packages/PIL/_imaging.cpython-36m-x86_64-linux-gnu.so
+7f540d74a000-7f540d7ca000 rw-p 00000000 00:00 0 
+7f540d7ca000-7f540d853000 r--p 00000000 08:01 1184726                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f540d853000-7f540d8ff000 r-xp 00089000 08:01 1184726                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f540d8ff000-7f540d93d000 r--p 00135000 08:01 1184726                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f540d93d000-7f540d93e000 ---p 00173000 08:01 1184726                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f540d93e000-7f540d948000 r--p 00173000 08:01 1184726                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f540d948000-7f540d94a000 rw-p 0017d000 08:01 1184726                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f540d94a000-7f540d94e000 rw-p 00000000 00:00 0 
+7f540d94e000-7f540d951000 r--s 0000f000 08:01 1205643                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+7f540d951000-7f540d96c000 r--s 00394000 08:01 1205641                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/cldrdata.jar
+7f540d96c000-7f540d974000 rw-s 00000000 08:01 3148140                    /tmp/hsperfdata_root/6987 (deleted)
+7f540d974000-7f540d9e7000 r-xp 00000000 08:01 2262251                    /usr/lib/python3/dist-packages/_jpype.cpython-36m-x86_64-linux-gnu.so
+7f540d9e7000-7f540dbe7000 ---p 00073000 08:01 2262251                    /usr/lib/python3/dist-packages/_jpype.cpython-36m-x86_64-linux-gnu.so
+7f540dbe7000-7f540dbe9000 r--p 00073000 08:01 2262251                    /usr/lib/python3/dist-packages/_jpype.cpython-36m-x86_64-linux-gnu.so
+7f540dbe9000-7f540dbec000 rw-p 00075000 08:01 2262251                    /usr/lib/python3/dist-packages/_jpype.cpython-36m-x86_64-linux-gnu.so
+7f540dbec000-7f540e02c000 rw-p 00000000 00:00 0 
+7f540e02c000-7f540e05b000 r--p 00000000 08:01 2491201                    /usr/lib/python3/dist-packages/cryptography/hazmat/bindings/_openssl.abi3.so
+7f540e05b000-7f540e0b8000 r-xp 0002f000 08:01 2491201                    /usr/lib/python3/dist-packages/cryptography/hazmat/bindings/_openssl.abi3.so
+7f540e0b8000-7f540e0dc000 r--p 0008c000 08:01 2491201                    /usr/lib/python3/dist-packages/cryptography/hazmat/bindings/_openssl.abi3.so
+7f540e0dc000-7f540e0dd000 ---p 000b0000 08:01 2491201                    /usr/lib/python3/dist-packages/cryptography/hazmat/bindings/_openssl.abi3.so
+7f540e0dd000-7f540e0f0000 r--p 000b0000 08:01 2491201                    /usr/lib/python3/dist-packages/cryptography/hazmat/bindings/_openssl.abi3.so
+7f540e0f0000-7f540e0f7000 rw-p 000c3000 08:01 2491201                    /usr/lib/python3/dist-packages/cryptography/hazmat/bindings/_openssl.abi3.so
+7f540e0f7000-7f540e177000 rw-p 00000000 00:00 0 
+7f540e177000-7f540e17e000 r--p 00000000 08:01 2235428                    /usr/lib/python3/dist-packages/_cffi_backend.cpython-36m-x86_64-linux-gnu.so
+7f540e17e000-7f540e193000 r-xp 00007000 08:01 2235428                    /usr/lib/python3/dist-packages/_cffi_backend.cpython-36m-x86_64-linux-gnu.so
+7f540e193000-7f540e19b000 r--p 0001c000 08:01 2235428                    /usr/lib/python3/dist-packages/_cffi_backend.cpython-36m-x86_64-linux-gnu.so
+7f540e19b000-7f540e19c000 ---p 00024000 08:01 2235428                    /usr/lib/python3/dist-packages/_cffi_backend.cpython-36m-x86_64-linux-gnu.so
+7f540e19c000-7f540e19d000 r--p 00024000 08:01 2235428                    /usr/lib/python3/dist-packages/_cffi_backend.cpython-36m-x86_64-linux-gnu.so
+7f540e19d000-7f540e1a2000 rw-p 00025000 08:01 2235428                    /usr/lib/python3/dist-packages/_cffi_backend.cpython-36m-x86_64-linux-gnu.so
+7f540e1a2000-7f540e1a5000 rw-p 00000000 00:00 0 
+7f540e1a5000-7f540e1e5000 rw-p 00000000 00:00 0 
+7f540e1e5000-7f540e261000 r--p 00000000 08:01 1061217                    /usr/local/lib/libcrypto.so.3
+7f540e261000-7f540e474000 r-xp 0007c000 08:01 1061217                    /usr/local/lib/libcrypto.so.3
+7f540e474000-7f540e50b000 r--p 0028f000 08:01 1061217                    /usr/local/lib/libcrypto.so.3
+7f540e50b000-7f540e539000 r--p 00325000 08:01 1061217                    /usr/local/lib/libcrypto.so.3
+7f540e539000-7f540e53c000 rw-p 00353000 08:01 1061217                    /usr/local/lib/libcrypto.so.3
+7f540e53c000-7f540e53f000 rw-p 00000000 00:00 0 
+7f540e53f000-7f540e540000 r--s 00010000 08:01 1205650                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/zipfs.jar
+7f540e540000-7f540e542000 r--s 00001000 08:01 1205642                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/dnsns.jar
+7f540e542000-7f540e544000 r--s 00008000 08:01 1205647                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunec.jar
+7f540e544000-7f540e54b000 r--p 00000000 08:01 2103481                    /usr/lib/python3.6/lib-dynload/_sqlite3.cpython-36m-x86_64-linux-gnu.so
+7f540e54b000-7f540e554000 r-xp 00007000 08:01 2103481                    /usr/lib/python3.6/lib-dynload/_sqlite3.cpython-36m-x86_64-linux-gnu.so
+7f540e554000-7f540e558000 r--p 00010000 08:01 2103481                    /usr/lib/python3.6/lib-dynload/_sqlite3.cpython-36m-x86_64-linux-gnu.so
+7f540e558000-7f540e559000 ---p 00014000 08:01 2103481                    /usr/lib/python3.6/lib-dynload/_sqlite3.cpython-36m-x86_64-linux-gnu.so
+7f540e559000-7f540e55a000 r--p 00014000 08:01 2103481                    /usr/lib/python3.6/lib-dynload/_sqlite3.cpython-36m-x86_64-linux-gnu.so
+7f540e55a000-7f540e55d000 rw-p 00015000 08:01 2103481                    /usr/lib/python3.6/lib-dynload/_sqlite3.cpython-36m-x86_64-linux-gnu.so
+7f540e55d000-7f540e560000 r--p 00000000 08:01 2103495                    /usr/lib/python3.6/lib-dynload/termios.cpython-36m-x86_64-linux-gnu.so
+7f540e560000-7f540e561000 r-xp 00003000 08:01 2103495                    /usr/lib/python3.6/lib-dynload/termios.cpython-36m-x86_64-linux-gnu.so
+7f540e561000-7f540e562000 r--p 00004000 08:01 2103495                    /usr/lib/python3.6/lib-dynload/termios.cpython-36m-x86_64-linux-gnu.so
+7f540e562000-7f540e563000 r--p 00004000 08:01 2103495                    /usr/lib/python3.6/lib-dynload/termios.cpython-36m-x86_64-linux-gnu.so
+7f540e563000-7f540e565000 rw-p 00005000 08:01 2103495                    /usr/lib/python3.6/lib-dynload/termios.cpython-36m-x86_64-linux-gnu.so
+7f540e565000-7f540e925000 rw-p 00000000 00:00 0 
+7f540e925000-7f540e927000 r--p 00000000 08:01 2103476                    /usr/lib/python3.6/lib-dynload/_lsprof.cpython-36m-x86_64-linux-gnu.so
+7f540e927000-7f540e929000 r-xp 00002000 08:01 2103476                    /usr/lib/python3.6/lib-dynload/_lsprof.cpython-36m-x86_64-linux-gnu.so
+7f540e929000-7f540e92a000 r--p 00004000 08:01 2103476                    /usr/lib/python3.6/lib-dynload/_lsprof.cpython-36m-x86_64-linux-gnu.so
+7f540e92a000-7f540e92b000 r--p 00004000 08:01 2103476                    /usr/lib/python3.6/lib-dynload/_lsprof.cpython-36m-x86_64-linux-gnu.so
+7f540e92b000-7f540e92c000 rw-p 00005000 08:01 2103476                    /usr/lib/python3.6/lib-dynload/_lsprof.cpython-36m-x86_64-linux-gnu.so
+7f540e92c000-7f540ed2d000 rw-p 00000000 00:00 0 
+7f540ed2d000-7f540f1f8000 r-xp 00000000 08:01 1719217                    /usr/local/lib/python3.6/dist-packages/lxml/etree.cpython-36m-x86_64-linux-gnu.so
+7f540f1f8000-7f540f3f8000 ---p 004cb000 08:01 1719217                    /usr/local/lib/python3.6/dist-packages/lxml/etree.cpython-36m-x86_64-linux-gnu.so
+7f540f3f8000-7f540f433000 rw-p 004cb000 08:01 1719217                    /usr/local/lib/python3.6/dist-packages/lxml/etree.cpython-36m-x86_64-linux-gnu.so
+7f540f433000-7f540f440000 rw-p 00000000 00:00 0 
+7f540f440000-7f540f5c0000 rw-p 00000000 00:00 0 
+7f540f5c0000-7f540f5c7000 r-xp 00000000 08:01 1576522                    /usr/local/lib/python3.6/dist-packages/zope/interface/_zope_interface_coptimizations.cpython-36m-x86_64-linux-gnu.so
+7f540f5c7000-7f540f7c6000 ---p 00007000 08:01 1576522                    /usr/local/lib/python3.6/dist-packages/zope/interface/_zope_interface_coptimizations.cpython-36m-x86_64-linux-gnu.so
+7f540f7c6000-7f540f7c8000 rw-p 00006000 08:01 1576522                    /usr/local/lib/python3.6/dist-packages/zope/interface/_zope_interface_coptimizations.cpython-36m-x86_64-linux-gnu.so
+7f540f7c8000-7f540f8c8000 rw-p 00000000 00:00 0 
+7f540f8c8000-7f540f8ca000 r--p 00000000 08:01 2103475                    /usr/lib/python3.6/lib-dynload/_json.cpython-36m-x86_64-linux-gnu.so
+7f540f8ca000-7f540f8d8000 r-xp 00002000 08:01 2103475                    /usr/lib/python3.6/lib-dynload/_json.cpython-36m-x86_64-linux-gnu.so
+7f540f8d8000-7f540f8da000 r--p 00010000 08:01 2103475                    /usr/lib/python3.6/lib-dynload/_json.cpython-36m-x86_64-linux-gnu.so
+7f540f8da000-7f540f8db000 r--p 00011000 08:01 2103475                    /usr/lib/python3.6/lib-dynload/_json.cpython-36m-x86_64-linux-gnu.so
+7f540f8db000-7f540f8dc000 rw-p 00012000 08:01 2103475                    /usr/lib/python3.6/lib-dynload/_json.cpython-36m-x86_64-linux-gnu.so
+7f540f8dc000-7f540f8e5000 r--p 00000000 08:01 2103482                    /usr/lib/python3.6/lib-dynload/_ssl.cpython-36m-x86_64-linux-gnu.so
+7f540f8e5000-7f540f8ee000 r-xp 00009000 08:01 2103482                    /usr/lib/python3.6/lib-dynload/_ssl.cpython-36m-x86_64-linux-gnu.so
+7f540f8ee000-7f540f8f4000 r--p 00012000 08:01 2103482                    /usr/lib/python3.6/lib-dynload/_ssl.cpython-36m-x86_64-linux-gnu.so
+7f540f8f4000-7f540f8f5000 r--p 00017000 08:01 2103482                    /usr/lib/python3.6/lib-dynload/_ssl.cpython-36m-x86_64-linux-gnu.so
+7f540f8f5000-7f540f8fa000 rw-p 00018000 08:01 2103482                    /usr/lib/python3.6/lib-dynload/_ssl.cpython-36m-x86_64-linux-gnu.so
+7f540f8fa000-7f540fc7a000 rw-p 00000000 00:00 0 
+7f540fc7a000-7f540fc84000 r--p 00000000 08:01 2494257                    /usr/lib/python3/dist-packages/numpy/random/mtrand.cpython-36m-x86_64-linux-gnu.so
+7f540fc84000-7f540fd16000 r-xp 0000a000 08:01 2494257                    /usr/lib/python3/dist-packages/numpy/random/mtrand.cpython-36m-x86_64-linux-gnu.so
+7f540fd16000-7f540fd39000 r--p 0009c000 08:01 2494257                    /usr/lib/python3/dist-packages/numpy/random/mtrand.cpython-36m-x86_64-linux-gnu.so
+7f540fd39000-7f540fd3a000 r--p 000be000 08:01 2494257                    /usr/lib/python3/dist-packages/numpy/random/mtrand.cpython-36m-x86_64-linux-gnu.so
+7f540fd3a000-7f540fd5e000 rw-p 000bf000 08:01 2494257                    /usr/lib/python3/dist-packages/numpy/random/mtrand.cpython-36m-x86_64-linux-gnu.so
+7f540fd5e000-7f540fd60000 rw-p 00000000 00:00 0 
+7f540fd60000-7f540fda0000 rw-p 00000000 00:00 0 
+7f540fda0000-7f540fda1000 r--p 00000000 08:01 2494102                    /usr/lib/python3/dist-packages/numpy/fft/fftpack_lite.cpython-36m-x86_64-linux-gnu.so
+7f540fda1000-7f540fda9000 r-xp 00001000 08:01 2494102                    /usr/lib/python3/dist-packages/numpy/fft/fftpack_lite.cpython-36m-x86_64-linux-gnu.so
+7f540fda9000-7f540fdaa000 r--p 00009000 08:01 2494102                    /usr/lib/python3/dist-packages/numpy/fft/fftpack_lite.cpython-36m-x86_64-linux-gnu.so
+7f540fdaa000-7f540fdab000 r--p 00009000 08:01 2494102                    /usr/lib/python3/dist-packages/numpy/fft/fftpack_lite.cpython-36m-x86_64-linux-gnu.so
+7f540fdab000-7f540fdac000 rw-p 0000a000 08:01 2494102                    /usr/lib/python3/dist-packages/numpy/fft/fftpack_lite.cpython-36m-x86_64-linux-gnu.so
+7f540fdac000-7f540fdec000 rw-p 00000000 00:00 0 
+7f540fdec000-7f540fe24000 r-xp 00000000 08:01 1185199                    /usr/lib/x86_64-linux-gnu/libmpdec.so.2.4.2
+7f540fe24000-7f5410023000 ---p 00038000 08:01 1185199                    /usr/lib/x86_64-linux-gnu/libmpdec.so.2.4.2
+7f5410023000-7f5410024000 r--p 00037000 08:01 1185199                    /usr/lib/x86_64-linux-gnu/libmpdec.so.2.4.2
+7f5410024000-7f5410025000 rw-p 00038000 08:01 1185199                    /usr/lib/x86_64-linux-gnu/libmpdec.so.2.4.2
+7f5410025000-7f5410026000 r--s 0000a000 08:01 1205644                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jaccess.jar
+7f5410026000-7f5410028000 r--p 00000000 08:01 1185938                    /usr/lib/x86_64-linux-gnu/librt-2.28.so
+7f5410028000-7f541002c000 r-xp 00002000 08:01 1185938                    /usr/lib/x86_64-linux-gnu/librt-2.28.so
+7f541002c000-7f541002e000 r--p 00006000 08:01 1185938                    /usr/lib/x86_64-linux-gnu/librt-2.28.so
+7f541002e000-7f541002f000 r--p 00007000 08:01 1185938                    /usr/lib/x86_64-linux-gnu/librt-2.28.so
+7f541002f000-7f5410030000 rw-p 00008000 08:01 1185938                    /usr/lib/x86_64-linux-gnu/librt-2.28.so
+7f5410030000-7f5410037000 r--p 00000000 08:01 2493884                    /usr/lib/python3/dist-packages/numpy/core/_multiarray_tests.cpython-36m-x86_64-linux-gnu.so
+7f5410037000-7f5410045000 r-xp 00007000 08:01 2493884                    /usr/lib/python3/dist-packages/numpy/core/_multiarray_tests.cpython-36m-x86_64-linux-gnu.so
+7f5410045000-7f5410049000 r--p 00015000 08:01 2493884                    /usr/lib/python3/dist-packages/numpy/core/_multiarray_tests.cpython-36m-x86_64-linux-gnu.so
+7f5410049000-7f541004a000 r--p 00018000 08:01 2493884                    /usr/lib/python3/dist-packages/numpy/core/_multiarray_tests.cpython-36m-x86_64-linux-gnu.so
+7f541004a000-7f541004b000 rw-p 00019000 08:01 2493884                    /usr/lib/python3/dist-packages/numpy/core/_multiarray_tests.cpython-36m-x86_64-linux-gnu.so
+7f541004b000-7f5410053000 r--p 00000000 08:01 2103473                    /usr/lib/python3.6/lib-dynload/_decimal.cpython-36m-x86_64-linux-gnu.so
+7f5410053000-7f5410068000 r-xp 00008000 08:01 2103473                    /usr/lib/python3.6/lib-dynload/_decimal.cpython-36m-x86_64-linux-gnu.so
+7f5410068000-7f541006e000 r--p 0001d000 08:01 2103473                    /usr/lib/python3.6/lib-dynload/_decimal.cpython-36m-x86_64-linux-gnu.so
+7f541006e000-7f541006f000 r--p 00022000 08:01 2103473                    /usr/lib/python3.6/lib-dynload/_decimal.cpython-36m-x86_64-linux-gnu.so
+7f541006f000-7f5410078000 rw-p 00023000 08:01 2103473                    /usr/lib/python3.6/lib-dynload/_decimal.cpython-36m-x86_64-linux-gnu.so
+7f5410078000-7f54100f8000 rw-p 00000000 00:00 0 
+7f54100f8000-7f541011e000 r--p 00000000 08:01 1183132                    /usr/lib/x86_64-linux-gnu/atlas/liblapack.so.3.10.3
+7f541011e000-7f541070c000 r-xp 00026000 08:01 1183132                    /usr/lib/x86_64-linux-gnu/atlas/liblapack.so.3.10.3
+7f541070c000-7f54107c0000 r--p 00614000 08:01 1183132                    /usr/lib/x86_64-linux-gnu/atlas/liblapack.so.3.10.3
+7f54107c0000-7f54107c1000 r--p 006c7000 08:01 1183132                    /usr/lib/x86_64-linux-gnu/atlas/liblapack.so.3.10.3
+7f54107c1000-7f54107c6000 rw-p 006c8000 08:01 1183132                    /usr/lib/x86_64-linux-gnu/atlas/liblapack.so.3.10.3
+7f54107c6000-7f5410846000 rw-p 00000000 00:00 0 
+7f5410846000-7f5410847000 r--p 00000000 08:01 2103494                    /usr/lib/python3.6/lib-dynload/resource.cpython-36m-x86_64-linux-gnu.so
+7f5410847000-7f5410848000 r-xp 00001000 08:01 2103494                    /usr/lib/python3.6/lib-dynload/resource.cpython-36m-x86_64-linux-gnu.so
+7f5410848000-7f5410849000 r--p 00002000 08:01 2103494                    /usr/lib/python3.6/lib-dynload/resource.cpython-36m-x86_64-linux-gnu.so
+7f5410849000-7f541084a000 r--p 00002000 08:01 2103494                    /usr/lib/python3.6/lib-dynload/resource.cpython-36m-x86_64-linux-gnu.so
+7f541084a000-7f541084b000 rw-p 00003000 08:01 2103494                    /usr/lib/python3.6/lib-dynload/resource.cpython-36m-x86_64-linux-gnu.so
+7f541084b000-7f541084d000 r--p 00000000 08:01 2103467                    /usr/lib/python3.6/lib-dynload/_csv.cpython-36m-x86_64-linux-gnu.so
+7f541084d000-7f5410852000 r-xp 00002000 08:01 2103467                    /usr/lib/python3.6/lib-dynload/_csv.cpython-36m-x86_64-linux-gnu.so
+7f5410852000-7f5410853000 r--p 00007000 08:01 2103467                    /usr/lib/python3.6/lib-dynload/_csv.cpython-36m-x86_64-linux-gnu.so
+7f5410853000-7f5410854000 ---p 00008000 08:01 2103467                    /usr/lib/python3.6/lib-dynload/_csv.cpython-36m-x86_64-linux-gnu.so
+7f5410854000-7f5410855000 r--p 00008000 08:01 2103467                    /usr/lib/python3.6/lib-dynload/_csv.cpython-36m-x86_64-linux-gnu.so
+7f5410855000-7f5410857000 rw-p 00009000 08:01 2103467                    /usr/lib/python3.6/lib-dynload/_csv.cpython-36m-x86_64-linux-gnu.so
+7f5410857000-7f54109d7000 rw-p 00000000 00:00 0 
+7f54109d7000-7f54109d9000 r--p 00000000 08:01 1184515                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.4
+7f54109d9000-7f54109de000 r-xp 00002000 08:01 1184515                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.4
+7f54109de000-7f54109df000 r--p 00007000 08:01 1184515                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.4
+7f54109df000-7f54109e0000 r--p 00007000 08:01 1184515                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.4
+7f54109e0000-7f54109e1000 rw-p 00008000 08:01 1184515                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.4
+7f54109e1000-7f54109e2000 rw-p 00000000 00:00 0 
+7f54109e2000-7f54109e3000 ---p 00000000 00:00 0 
+7f54109e3000-7f54109ea000 r--p 00000000 08:01 2494178                    /usr/lib/python3/dist-packages/numpy/linalg/_umath_linalg.cpython-36m-x86_64-linux-gnu.so
+7f54109ea000-7f5410a00000 r-xp 00007000 08:01 2494178                    /usr/lib/python3/dist-packages/numpy/linalg/_umath_linalg.cpython-36m-x86_64-linux-gnu.so
+7f5410a00000-7f5410a05000 r--p 0001d000 08:01 2494178                    /usr/lib/python3/dist-packages/numpy/linalg/_umath_linalg.cpython-36m-x86_64-linux-gnu.so
+7f5410a05000-7f5410a06000 r--p 00021000 08:01 2494178                    /usr/lib/python3/dist-packages/numpy/linalg/_umath_linalg.cpython-36m-x86_64-linux-gnu.so
+7f5410a06000-7f5410a07000 rw-p 00022000 08:01 2494178                    /usr/lib/python3/dist-packages/numpy/linalg/_umath_linalg.cpython-36m-x86_64-linux-gnu.so
+7f5410a07000-7f5410a87000 rw-p 00000000 00:00 0 
+7f5410a87000-7f5410a96000 r--p 00000000 08:01 2493990                    /usr/lib/python3/dist-packages/numpy/core/umath.cpython-36m-x86_64-linux-gnu.so
+7f5410a96000-7f5410bb8000 r-xp 0000f000 08:01 2493990                    /usr/lib/python3/dist-packages/numpy/core/umath.cpython-36m-x86_64-linux-gnu.so
+7f5410bb8000-7f5410bf3000 r--p 00131000 08:01 2493990                    /usr/lib/python3/dist-packages/numpy/core/umath.cpython-36m-x86_64-linux-gnu.so
+7f5410bf3000-7f5410bf4000 r--p 0016b000 08:01 2493990                    /usr/lib/python3/dist-packages/numpy/core/umath.cpython-36m-x86_64-linux-gnu.so
+7f5410bf4000-7f5410bfa000 rw-p 0016c000 08:01 2493990                    /usr/lib/python3/dist-packages/numpy/core/umath.cpython-36m-x86_64-linux-gnu.so
+7f5410bfa000-7f5410bfc000 rw-p 00000000 00:00 0 
+7f5410bfc000-7f5410bfe000 r--p 00000000 08:01 1184097                    /usr/lib/x86_64-linux-gnu/libquadmath.so.0.0.0
+7f5410bfe000-7f5410c26000 r-xp 00002000 08:01 1184097                    /usr/lib/x86_64-linux-gnu/libquadmath.so.0.0.0
+7f5410c26000-7f5410c3c000 r--p 0002a000 08:01 1184097                    /usr/lib/x86_64-linux-gnu/libquadmath.so.0.0.0
+7f5410c3c000-7f5410c3d000 r--p 0003f000 08:01 1184097                    /usr/lib/x86_64-linux-gnu/libquadmath.so.0.0.0
+7f5410c3d000-7f5410c3e000 rw-p 00040000 08:01 1184097                    /usr/lib/x86_64-linux-gnu/libquadmath.so.0.0.0
+7f5410c3e000-7f5410c41000 r--p 00000000 08:01 1184664                    /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7f5410c41000-7f5410c52000 r-xp 00003000 08:01 1184664                    /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7f5410c52000-7f5410c55000 r--p 00014000 08:01 1184664                    /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7f5410c55000-7f5410c56000 ---p 00017000 08:01 1184664                    /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7f5410c56000-7f5410c57000 r--p 00017000 08:01 1184664                    /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7f5410c57000-7f5410c58000 rw-p 00018000 08:01 1184664                    /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7f5410c58000-7f5410c72000 r--p 00000000 08:01 1185212                    /usr/lib/x86_64-linux-gnu/libgfortran.so.5.0.0
+7f5410c72000-7f5410e93000 r-xp 0001a000 08:01 1185212                    /usr/lib/x86_64-linux-gnu/libgfortran.so.5.0.0
+7f5410e93000-7f5410ec2000 r--p 0023b000 08:01 1185212                    /usr/lib/x86_64-linux-gnu/libgfortran.so.5.0.0
+7f5410ec2000-7f5410ec3000 ---p 0026a000 08:01 1185212                    /usr/lib/x86_64-linux-gnu/libgfortran.so.5.0.0
+7f5410ec3000-7f5410ec4000 r--p 0026a000 08:01 1185212                    /usr/lib/x86_64-linux-gnu/libgfortran.so.5.0.0
+7f5410ec4000-7f5410ec6000 rw-p 0026b000 08:01 1185212                    /usr/lib/x86_64-linux-gnu/libgfortran.so.5.0.0
+7f5410ec6000-7f5410f00000 r--p 00000000 08:01 1184095                    /usr/lib/x86_64-linux-gnu/libatlas.so.3.10.3
+7f5410f00000-7f541120d000 r-xp 0003a000 08:01 1184095                    /usr/lib/x86_64-linux-gnu/libatlas.so.3.10.3
+7f541120d000-7f541125b000 r--p 00347000 08:01 1184095                    /usr/lib/x86_64-linux-gnu/libatlas.so.3.10.3
+7f541125b000-7f541125c000 ---p 00395000 08:01 1184095                    /usr/lib/x86_64-linux-gnu/libatlas.so.3.10.3
+7f541125c000-7f5411260000 r--p 00395000 08:01 1184095                    /usr/lib/x86_64-linux-gnu/libatlas.so.3.10.3
+7f5411260000-7f5411264000 rw-p 00399000 08:01 1184095                    /usr/lib/x86_64-linux-gnu/libatlas.so.3.10.3
+7f5411264000-7f54112a5000 r--p 00000000 08:01 1183130                    /usr/lib/x86_64-linux-gnu/atlas/libblas.so.3.10.3
+7f54112a5000-7f54115dd000 r-xp 00041000 08:01 1183130                    /usr/lib/x86_64-linux-gnu/atlas/libblas.so.3.10.3
+7f54115dd000-7f5411635000 r--p 00379000 08:01 1183130                    /usr/lib/x86_64-linux-gnu/atlas/libblas.so.3.10.3
+7f5411635000-7f5411636000 ---p 003d1000 08:01 1183130                    /usr/lib/x86_64-linux-gnu/atlas/libblas.so.3.10.3
+7f5411636000-7f541163a000 r--p 003d1000 08:01 1183130                    /usr/lib/x86_64-linux-gnu/atlas/libblas.so.3.10.3
+7f541163a000-7f541163e000 rw-p 003d5000 08:01 1183130                    /usr/lib/x86_64-linux-gnu/atlas/libblas.so.3.10.3
+7f541163e000-7f5411643000 r--p 00000000 08:01 1184244                    /usr/lib/x86_64-linux-gnu/libcblas.so.3.10.3
+7f5411643000-7f541165b000 r-xp 00005000 08:01 1184244                    /usr/lib/x86_64-linux-gnu/libcblas.so.3.10.3
+7f541165b000-7f5411660000 r--p 0001d000 08:01 1184244                    /usr/lib/x86_64-linux-gnu/libcblas.so.3.10.3
+7f5411660000-7f5411661000 r--p 00021000 08:01 1184244                    /usr/lib/x86_64-linux-gnu/libcblas.so.3.10.3
+7f5411661000-7f5411662000 rw-p 00022000 08:01 1184244                    /usr/lib/x86_64-linux-gnu/libcblas.so.3.10.3
+7f5411662000-7f541167f000 r--p 00000000 08:01 2493938                    /usr/lib/python3/dist-packages/numpy/core/multiarray.cpython-36m-x86_64-linux-gnu.so
+7f541167f000-7f54117a4000 r-xp 0001d000 08:01 2493938                    /usr/lib/python3/dist-packages/numpy/core/multiarray.cpython-36m-x86_64-linux-gnu.so
+7f54117a4000-7f54117e7000 r--p 00142000 08:01 2493938                    /usr/lib/python3/dist-packages/numpy/core/multiarray.cpython-36m-x86_64-linux-gnu.so
+7f54117e7000-7f54117e8000 ---p 00185000 08:01 2493938                    /usr/lib/python3/dist-packages/numpy/core/multiarray.cpython-36m-x86_64-linux-gnu.so
+7f54117e8000-7f54117ea000 r--p 00185000 08:01 2493938                    /usr/lib/python3/dist-packages/numpy/core/multiarray.cpython-36m-x86_64-linux-gnu.so
+7f54117ea000-7f5411802000 rw-p 00187000 08:01 2493938                    /usr/lib/python3/dist-packages/numpy/core/multiarray.cpython-36m-x86_64-linux-gnu.so
+7f5411802000-7f5411820000 rw-p 00000000 00:00 0 
+7f5411820000-7f54118a0000 rw-p 00000000 00:00 0 
+7f54118a0000-7f5411925000 r--p 00000000 08:01 1184307                    /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1
+7f5411925000-7f5411ac5000 r-xp 00085000 08:01 1184307                    /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1
+7f5411ac5000-7f5411b52000 r--p 00225000 08:01 1184307                    /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1
+7f5411b52000-7f5411b53000 ---p 002b2000 08:01 1184307                    /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1
+7f5411b53000-7f5411b83000 r--p 002b2000 08:01 1184307                    /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1
+7f5411b83000-7f5411b85000 rw-p 002e2000 08:01 1184307                    /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1
+7f5411b85000-7f5411b88000 rw-p 00000000 00:00 0 
+7f5411b88000-7f5411ba5000 r--p 00000000 08:01 1185751                    /usr/lib/x86_64-linux-gnu/libssl.so.1.1
+7f5411ba5000-7f5411bf2000 r-xp 0001d000 08:01 1185751                    /usr/lib/x86_64-linux-gnu/libssl.so.1.1
+7f5411bf2000-7f5411c0c000 r--p 0006a000 08:01 1185751                    /usr/lib/x86_64-linux-gnu/libssl.so.1.1
+7f5411c0c000-7f5411c15000 r--p 00083000 08:01 1185751                    /usr/lib/x86_64-linux-gnu/libssl.so.1.1
+7f5411c15000-7f5411c19000 rw-p 0008c000 08:01 1185751                    /usr/lib/x86_64-linux-gnu/libssl.so.1.1
+7f5411c19000-7f5411c59000 rw-p 00000000 00:00 0 
+7f5411c59000-7f5411c5c000 r--p 00000000 08:01 1185008                    /usr/lib/x86_64-linux-gnu/liblzma.so.5.2.4
+7f5411c5c000-7f5411c74000 r-xp 00003000 08:01 1185008                    /usr/lib/x86_64-linux-gnu/liblzma.so.5.2.4
+7f5411c74000-7f5411c7f000 r--p 0001b000 08:01 1185008                    /usr/lib/x86_64-linux-gnu/liblzma.so.5.2.4
+7f5411c7f000-7f5411c80000 r--p 00025000 08:01 1185008                    /usr/lib/x86_64-linux-gnu/liblzma.so.5.2.4
+7f5411c80000-7f5411c81000 rw-p 00026000 08:01 1185008                    /usr/lib/x86_64-linux-gnu/liblzma.so.5.2.4
+7f5411c81000-7f5411c82000 r--p 00000000 08:01 2491200                    /usr/lib/python3/dist-packages/cryptography/hazmat/bindings/_constant_time.abi3.so
+7f5411c82000-7f5411c83000 r-xp 00001000 08:01 2491200                    /usr/lib/python3/dist-packages/cryptography/hazmat/bindings/_constant_time.abi3.so
+7f5411c83000-7f5411c84000 r--p 00002000 08:01 2491200                    /usr/lib/python3/dist-packages/cryptography/hazmat/bindings/_constant_time.abi3.so
+7f5411c84000-7f5411c85000 r--p 00002000 08:01 2491200                    /usr/lib/python3/dist-packages/cryptography/hazmat/bindings/_constant_time.abi3.so
+7f5411c85000-7f5411c86000 rw-p 00003000 08:01 2491200                    /usr/lib/python3/dist-packages/cryptography/hazmat/bindings/_constant_time.abi3.so
+7f5411c86000-7f5411c8d000 r--p 00000000 08:01 2103468                    /usr/lib/python3.6/lib-dynload/_ctypes.cpython-36m-x86_64-linux-gnu.so
+7f5411c8d000-7f5411c9c000 r-xp 00007000 08:01 2103468                    /usr/lib/python3.6/lib-dynload/_ctypes.cpython-36m-x86_64-linux-gnu.so
+7f5411c9c000-7f5411ca2000 r--p 00016000 08:01 2103468                    /usr/lib/python3.6/lib-dynload/_ctypes.cpython-36m-x86_64-linux-gnu.so
+7f5411ca2000-7f5411ca3000 r--p 0001b000 08:01 2103468                    /usr/lib/python3.6/lib-dynload/_ctypes.cpython-36m-x86_64-linux-gnu.so
+7f5411ca3000-7f5411ca7000 rw-p 0001c000 08:01 2103468                    /usr/lib/python3.6/lib-dynload/_ctypes.cpython-36m-x86_64-linux-gnu.so
+7f5411ca7000-7f5411da7000 rw-p 00000000 00:00 0 
+7f5411da7000-7f5411da9000 r--p 00000000 08:01 1185941                    /usr/lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7f5411da9000-7f5411dad000 r-xp 00002000 08:01 1185941                    /usr/lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7f5411dad000-7f5411dae000 r--p 00006000 08:01 1185941                    /usr/lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7f5411dae000-7f5411daf000 r--p 00006000 08:01 1185941                    /usr/lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7f5411daf000-7f5411db0000 rw-p 00007000 08:01 1185941                    /usr/lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7f5411db0000-7f5411f70000 rw-p 00000000 00:00 0 
+7f5411f70000-7f5411f71000 rwxp 00000000 00:00 0 
+7f5411f71000-7f5411f72000 r--p 00000000 08:01 2494181                    /usr/lib/python3/dist-packages/numpy/linalg/lapack_lite.cpython-36m-x86_64-linux-gnu.so
+7f5411f72000-7f5411f74000 r-xp 00001000 08:01 2494181                    /usr/lib/python3/dist-packages/numpy/linalg/lapack_lite.cpython-36m-x86_64-linux-gnu.so
+7f5411f74000-7f5411f75000 r--p 00003000 08:01 2494181                    /usr/lib/python3/dist-packages/numpy/linalg/lapack_lite.cpython-36m-x86_64-linux-gnu.so
+7f5411f75000-7f5411f76000 r--p 00003000 08:01 2494181                    /usr/lib/python3/dist-packages/numpy/linalg/lapack_lite.cpython-36m-x86_64-linux-gnu.so
+7f5411f76000-7f5411f77000 rw-p 00004000 08:01 2494181                    /usr/lib/python3/dist-packages/numpy/linalg/lapack_lite.cpython-36m-x86_64-linux-gnu.so
+7f5411f77000-7f5411f78000 rwxp 00000000 00:00 0 
+7f5411f78000-7f5411f7a000 r--p 00000000 08:01 2103477                    /usr/lib/python3.6/lib-dynload/_lzma.cpython-36m-x86_64-linux-gnu.so
+7f5411f7a000-7f5411f7d000 r-xp 00002000 08:01 2103477                    /usr/lib/python3.6/lib-dynload/_lzma.cpython-36m-x86_64-linux-gnu.so
+7f5411f7d000-7f5411f7f000 r--p 00005000 08:01 2103477                    /usr/lib/python3.6/lib-dynload/_lzma.cpython-36m-x86_64-linux-gnu.so
+7f5411f7f000-7f5411f80000 r--p 00006000 08:01 2103477                    /usr/lib/python3.6/lib-dynload/_lzma.cpython-36m-x86_64-linux-gnu.so
+7f5411f80000-7f5411f82000 rw-p 00007000 08:01 2103477                    /usr/lib/python3.6/lib-dynload/_lzma.cpython-36m-x86_64-linux-gnu.so
+7f5411f82000-7f5411f84000 r--p 00000000 08:01 1184206                    /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+7f5411f84000-7f5411f91000 r-xp 00002000 08:01 1184206                    /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+7f5411f91000-7f5411f93000 r--p 0000f000 08:01 1184206                    /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+7f5411f93000-7f5411f94000 r--p 00010000 08:01 1184206                    /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+7f5411f94000-7f5411f95000 rw-p 00011000 08:01 1184206                    /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+7f5411f95000-7f54120d5000 rw-p 00000000 00:00 0 
+7f54120d5000-7f5412128000 r--p 00000000 08:01 1708450                    /usr/lib/locale/aa_DJ.utf8/LC_CTYPE
+7f5412128000-7f54123a0000 r--p 00000000 08:01 1708449                    /usr/lib/locale/aa_DJ.utf8/LC_COLLATE
+7f54123a0000-7f54123a3000 rw-p 00000000 00:00 0 
+7f54123a3000-7f54123c5000 r--p 00000000 08:01 1185368                    /usr/lib/x86_64-linux-gnu/libc-2.28.so
+7f54123c5000-7f541250d000 r-xp 00022000 08:01 1185368                    /usr/lib/x86_64-linux-gnu/libc-2.28.so
+7f541250d000-7f5412559000 r--p 0016a000 08:01 1185368                    /usr/lib/x86_64-linux-gnu/libc-2.28.so
+7f5412559000-7f541255a000 ---p 001b6000 08:01 1185368                    /usr/lib/x86_64-linux-gnu/libc-2.28.so
+7f541255a000-7f541255e000 r--p 001b6000 08:01 1185368                    /usr/lib/x86_64-linux-gnu/libc-2.28.so
+7f541255e000-7f5412560000 rw-p 001ba000 08:01 1185368                    /usr/lib/x86_64-linux-gnu/libc-2.28.so
+7f5412560000-7f5412564000 rw-p 00000000 00:00 0 
+7f5412564000-7f5412566000 rw-p 00000000 00:00 0 
+7f5412566000-7f5412573000 r--p 00000000 08:01 1185371                    /usr/lib/x86_64-linux-gnu/libm-2.28.so
+7f5412573000-7f5412612000 r-xp 0000d000 08:01 1185371                    /usr/lib/x86_64-linux-gnu/libm-2.28.so
+7f5412612000-7f54126e7000 r--p 000ac000 08:01 1185371                    /usr/lib/x86_64-linux-gnu/libm-2.28.so
+7f54126e7000-7f54126e8000 r--p 00180000 08:01 1185371                    /usr/lib/x86_64-linux-gnu/libm-2.28.so
+7f54126e8000-7f54126e9000 rw-p 00181000 08:01 1185371                    /usr/lib/x86_64-linux-gnu/libm-2.28.so
+7f54126e9000-7f5412705000 r-xp 00000000 08:01 1186176                    /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7f5412705000-7f5412905000 ---p 0001c000 08:01 1186176                    /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7f5412905000-7f5412906000 r--p 0001c000 08:01 1186176                    /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7f5412906000-7f5412907000 rw-p 0001d000 08:01 1186176                    /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7f5412907000-7f541290b000 r--p 00000000 08:01 1184484                    /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.8
+7f541290b000-7f541292c000 r-xp 00004000 08:01 1184484                    /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.8
+7f541292c000-7f5412940000 r--p 00025000 08:01 1184484                    /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.8
+7f5412940000-7f5412941000 ---p 00039000 08:01 1184484                    /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.8
+7f5412941000-7f5412943000 r--p 00039000 08:01 1184484                    /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.8
+7f5412943000-7f5412944000 rw-p 0003b000 08:01 1184484                    /usr/lib/x86_64-linux-gnu/libexpat.so.1.6.8
+7f5412944000-7f5412945000 r--p 00000000 08:01 1196271                    /usr/lib/x86_64-linux-gnu/libutil-2.28.so
+7f5412945000-7f5412946000 r-xp 00001000 08:01 1196271                    /usr/lib/x86_64-linux-gnu/libutil-2.28.so
+7f5412946000-7f5412947000 r--p 00002000 08:01 1196271                    /usr/lib/x86_64-linux-gnu/libutil-2.28.so
+7f5412947000-7f5412948000 r--p 00002000 08:01 1196271                    /usr/lib/x86_64-linux-gnu/libutil-2.28.so
+7f5412948000-7f5412949000 rw-p 00003000 08:01 1196271                    /usr/lib/x86_64-linux-gnu/libutil-2.28.so
+7f5412949000-7f541294a000 r--p 00000000 08:01 1185370                    /usr/lib/x86_64-linux-gnu/libdl-2.28.so
+7f541294a000-7f541294b000 r-xp 00001000 08:01 1185370                    /usr/lib/x86_64-linux-gnu/libdl-2.28.so
+7f541294b000-7f541294c000 r--p 00002000 08:01 1185370                    /usr/lib/x86_64-linux-gnu/libdl-2.28.so
+7f541294c000-7f541294d000 r--p 00002000 08:01 1185370                    /usr/lib/x86_64-linux-gnu/libdl-2.28.so
+7f541294d000-7f541294e000 rw-p 00003000 08:01 1185370                    /usr/lib/x86_64-linux-gnu/libdl-2.28.so
+7f541294e000-7f5412954000 r--p 00000000 08:01 1185885                    /usr/lib/x86_64-linux-gnu/libpthread-2.28.so
+7f5412954000-7f5412963000 r-xp 00006000 08:01 1185885                    /usr/lib/x86_64-linux-gnu/libpthread-2.28.so
+7f5412963000-7f5412969000 r--p 00015000 08:01 1185885                    /usr/lib/x86_64-linux-gnu/libpthread-2.28.so
+7f5412969000-7f541296a000 r--p 0001a000 08:01 1185885                    /usr/lib/x86_64-linux-gnu/libpthread-2.28.so
+7f541296a000-7f541296b000 rw-p 0001b000 08:01 1185885                    /usr/lib/x86_64-linux-gnu/libpthread-2.28.so
+7f541296b000-7f541296f000 rw-p 00000000 00:00 0 
+7f541296f000-7f5412971000 rw-p 00000000 00:00 0 
+7f5412971000-7f5412973000 r--p 00000000 08:01 2103474                    /usr/lib/python3.6/lib-dynload/_hashlib.cpython-36m-x86_64-linux-gnu.so
+7f5412973000-7f5412976000 r-xp 00002000 08:01 2103474                    /usr/lib/python3.6/lib-dynload/_hashlib.cpython-36m-x86_64-linux-gnu.so
+7f5412976000-7f5412977000 r--p 00005000 08:01 2103474                    /usr/lib/python3.6/lib-dynload/_hashlib.cpython-36m-x86_64-linux-gnu.so
+7f5412977000-7f5412978000 ---p 00006000 08:01 2103474                    /usr/lib/python3.6/lib-dynload/_hashlib.cpython-36m-x86_64-linux-gnu.so
+7f5412978000-7f5412979000 r--p 00006000 08:01 2103474                    /usr/lib/python3.6/lib-dynload/_hashlib.cpython-36m-x86_64-linux-gnu.so
+7f5412979000-7f541297a000 rw-p 00007000 08:01 2103474                    /usr/lib/python3.6/lib-dynload/_hashlib.cpython-36m-x86_64-linux-gnu.so
+7f541297a000-7f541297c000 r--p 00000000 08:01 2103459                    /usr/lib/python3.6/lib-dynload/_bz2.cpython-36m-x86_64-linux-gnu.so
+7f541297c000-7f541297e000 r-xp 00002000 08:01 2103459                    /usr/lib/python3.6/lib-dynload/_bz2.cpython-36m-x86_64-linux-gnu.so
+7f541297e000-7f541297f000 r--p 00004000 08:01 2103459                    /usr/lib/python3.6/lib-dynload/_bz2.cpython-36m-x86_64-linux-gnu.so
+7f541297f000-7f5412980000 r--p 00004000 08:01 2103459                    /usr/lib/python3.6/lib-dynload/_bz2.cpython-36m-x86_64-linux-gnu.so
+7f5412980000-7f5412981000 rw-p 00005000 08:01 2103459                    /usr/lib/python3.6/lib-dynload/_bz2.cpython-36m-x86_64-linux-gnu.so
+7f5412981000-7f5412982000 r--p 00000000 08:01 2103480                    /usr/lib/python3.6/lib-dynload/_opcode.cpython-36m-x86_64-linux-gnu.so
+7f5412982000-7f5412983000 r-xp 00001000 08:01 2103480                    /usr/lib/python3.6/lib-dynload/_opcode.cpython-36m-x86_64-linux-gnu.so
+7f5412983000-7f5412984000 r--p 00002000 08:01 2103480                    /usr/lib/python3.6/lib-dynload/_opcode.cpython-36m-x86_64-linux-gnu.so
+7f5412984000-7f5412985000 r--p 00002000 08:01 2103480                    /usr/lib/python3.6/lib-dynload/_opcode.cpython-36m-x86_64-linux-gnu.so
+7f5412985000-7f5412986000 rw-p 00003000 08:01 2103480                    /usr/lib/python3.6/lib-dynload/_opcode.cpython-36m-x86_64-linux-gnu.so
+7f5412986000-7f5412987000 r--p 00000000 08:01 1708479                    /usr/lib/locale/aa_ET/LC_NUMERIC
+7f5412987000-7f5412988000 r--p 00000000 08:01 1835894                    /usr/lib/locale/en_US.utf8/LC_TIME
+7f5412988000-7f5412989000 r--p 00000000 08:01 1835378                    /usr/lib/locale/chr_US/LC_MONETARY
+7f5412989000-7f541298a000 r--p 00000000 08:01 1835673                    /usr/lib/locale/en_AG/LC_MESSAGES/SYS_LC_MESSAGES
+7f541298a000-7f541298b000 r--p 00000000 08:01 1835379                    /usr/lib/locale/chr_US/LC_PAPER
+7f541298b000-7f541298c000 r--p 00000000 08:01 1835206                    /usr/lib/locale/bi_VU/LC_NAME
+7f541298c000-7f541298d000 r--p 00000000 08:01 1835891                    /usr/lib/locale/en_US.utf8/LC_ADDRESS
+7f541298d000-7f541298e000 r--p 00000000 08:01 1835380                    /usr/lib/locale/chr_US/LC_TELEPHONE
+7f541298e000-7f541298f000 r--p 00000000 08:01 1835375                    /usr/lib/locale/chr_US/LC_MEASUREMENT
+7f541298f000-7f5412996000 r--s 00000000 08:01 1352292                    /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7f5412996000-7f5412997000 r--p 00000000 08:01 1835892                    /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+7f5412997000-7f5412998000 r--p 00000000 08:01 1184665                    /usr/lib/x86_64-linux-gnu/ld-2.28.so
+7f5412998000-7f54129b6000 r-xp 00001000 08:01 1184665                    /usr/lib/x86_64-linux-gnu/ld-2.28.so
+7f54129b6000-7f54129be000 r--p 0001f000 08:01 1184665                    /usr/lib/x86_64-linux-gnu/ld-2.28.so
+7f54129be000-7f54129bf000 r--p 00026000 08:01 1184665                    /usr/lib/x86_64-linux-gnu/ld-2.28.so
+7f54129bf000-7f54129c0000 rw-p 00027000 08:01 1184665                    /usr/lib/x86_64-linux-gnu/ld-2.28.so
+7f54129c0000-7f54129c1000 rw-p 00000000 00:00 0 
+7ffe053d6000-7ffe054d3000 rw-p 00000000 00:00 0                          [stack]
+7ffe0556a000-7ffe0556d000 r--p 00000000 00:00 0                          [vvar]
+7ffe0556d000-7ffe0556f000 r-xp 00000000 00:00 0                          [vdso]
+
+VM Arguments:
+jvm_args: -ea 
+java_command: <unknown>
+java_class_path (initial): /opt/project/qdReader/libs/testDes3Cbc.jar
+Launcher Type: generic
+
+Environment Variables:
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/android-ndk-r14b:~/Android/Sdk/android-ndk-r14b:/opt/test/gradle/gradle-3.5/bin
+USERNAME=root
+SHELL=/bin/bash
+DISPLAY=:1
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xaabcd0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xaabcd0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x8e1d50], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x8e1d50], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x8e1d50], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x8e1d50], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x8e1c00], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x8e20b0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x8e20b0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x8e20b0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x8e20b0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Kali
+DISTRIB_RELEASE=kali-rolling
+DISTRIB_CODENAME=kali-rolling
+DISTRIB_DESCRIPTION="Kali GNU/Linux Rolling"
+
+uname:Linux 4.19.0-kali1-amd64 #1 SMP Debian 4.19.13-1kali1 (2019-01-03) x86_64
+libc:glibc 2.28 NPTL 2.28 
+rlimit: STACK 8192k, CORE 0k, NPROC 31656, NOFILE 524288, AS infinity
+load average:0.58 0.49 0.62
+
+/proc/meminfo:
+MemTotal:        8147120 kB
+MemFree:         2639488 kB
+MemAvailable:    4740120 kB
+Buffers:          507144 kB
+Cached:          1601608 kB
+SwapCached:            0 kB
+Active:          3712092 kB
+Inactive:         990112 kB
+Active(anon):    2594332 kB
+Inactive(anon):    10688 kB
+Active(file):    1117760 kB
+Inactive(file):   979424 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:       2094076 kB
+SwapFree:        2094076 kB
+Dirty:               280 kB
+Writeback:             0 kB
+AnonPages:       2569004 kB
+Mapped:           307592 kB
+Shmem:             11916 kB
+Slab:             430880 kB
+SReclaimable:     308004 kB
+SUnreclaim:       122876 kB
+KernelStack:       15012 kB
+PageTables:        23996 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     6167636 kB
+Committed_AS:    7133644 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+Percpu:            50176 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   1335296 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      163712 kB
+DirectMap2M:     6127616 kB
+DirectMap1G:     4194304 kB
+
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 1 threads per core) family 6 model 78 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, tsc, tscinvbit, bmi1, bmi2, adx
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 78
+model name	: Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz
+stepping	: 3
+microcode	: 0xc2
+cpu MHz		: 2592.002
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 2
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology tsc_reliable nonstop_tsc cpuid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti fsgsbase tsc_adjust bmi1 avx2 smep bmi2 invpcid rdseed adx smap xsaveopt dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 5184.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 42 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 78
+model name	: Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz
+stepping	: 3
+microcode	: 0xc2
+cpu MHz		: 2592.002
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 2
+core id		: 1
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology tsc_reliable nonstop_tsc cpuid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti fsgsbase tsc_adjust bmi1 avx2 smep bmi2 invpcid rdseed adx smap xsaveopt dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 5184.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 42 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 78
+model name	: Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz
+stepping	: 3
+microcode	: 0xc2
+cpu MHz		: 2592.002
+cache size	: 4096 KB
+physical id	: 1
+siblings	: 2
+core id		: 0
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology tsc_reliable nonstop_tsc cpuid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti fsgsbase tsc_adjust bmi1 avx2 smep bmi2 invpcid rdseed adx smap xsaveopt dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 5184.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 42 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 78
+model name	: Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz
+stepping	: 3
+microcode	: 0xc2
+cpu MHz		: 2592.002
+cache size	: 4096 KB
+physical id	: 1
+siblings	: 2
+core id		: 1
+cpu cores	: 2
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology tsc_reliable nonstop_tsc cpuid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti fsgsbase tsc_adjust bmi1 avx2 smep bmi2 invpcid rdseed adx smap xsaveopt dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 5184.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 42 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 8147120k(2639488k free), swap 2094076k(2094076k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.171-b11) for linux-amd64 JRE (1.8.0_171-8u171-b11-2-b11), built on May 17 2018 20:17:27 by "buildd" with gcc 7.3.0
+
+time: Tue May 21 17:42:09 2019
+elapsed time: 13 seconds (0d 0h 0m 13s)
+

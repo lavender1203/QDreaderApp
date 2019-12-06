@@ -1,0 +1,22 @@
+target
+*.iml
+*.iws
+*.ipr
+/.classpath
+/.settings
+/.project
+*/.classpath
+*/.settings
+*/.project
+/.idea
+atlassian-ide-plugin.xml
+.DS_Store
+dependency-reduced-pom.xml
+littleproxy_cert
+littleproxy_keystore.jks
+
+# mockserver-related files
+ClientCertificate.pem
+ClientPrivateKey.pem
+ClientPublicKey.pem
+mockserver_keystore.jks
