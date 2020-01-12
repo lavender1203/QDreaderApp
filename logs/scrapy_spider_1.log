@@ -1,0 +1,1965 @@
+2020-01-12 08:25:42 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:25:42 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:25:42 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:25:42 [scrapy.extensions.telnet] INFO: Telnet Password: 66d5c5ffcefa636a
+2020-01-12 08:25:42 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:25:42 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:25:42 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:25:42 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:25:42 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:25:42 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:25:42 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:25:42 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:25:42 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-01-12 08:25:44 [scrapy.downloadermiddlewares.cookies] DEBUG: Sending cookies to: <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>
+Cookie: ywkey=ywU2vsg9bL87; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680719; loginType=4; lgk=1; QDInfo=7RNRLX6Ck3KY5aWgMB84vrDdhMzPrkpyDrEIbrK0xJ397r2LvU5C5GT/C+ZfDcXIJ31Wvz7+FUbq8Zq3x19Zb1bGTyTu9PdALkTI9pqfeKww7aaaXneUlMe9+RU8HHRiJsM5/bAZtWvzSP4GWdZiTm0/+DfW96s9; cmfuToken=N((a0tJD3qrhLwUlsfEdzYe8BGppxeaTlihPKPLV5s7gABtAYNbjA3TI3c-3WZZLKJcPHEH4_PX120g9QhXRkQbnStZbjyt6XzqgpXTaL8qIQJLGPxEGjQna3QMz-Rb0BQIrDa-U4s1XaEFjFsWlrO_KlhZtaCX1l8trfyz4UHh4TlxYddDEYeLjxMXoMfHyrIzQhNU1hr0E2h6GFWffUyyQomTr7d3Sgm-FVUd2JdBqVXHagoI3ps1_BxgXfZakGmg0; usertoken=5880124
+
+2020-01-12 08:25:45 [scrapy.core.engine] DEBUG: Crawled (402) <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0> (referer: None)
+2020-01-12 08:25:45 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <402 https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>: HTTP status code is not handled or not allowed
+2020-01-12 08:25:45 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-12 08:25:45 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1495,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 200,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/402': 1,
+ 'elapsed_time_seconds': 2.345032,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 12, 0, 25, 45, 283845),
+ 'httperror/response_ignored_count': 1,
+ 'httperror/response_ignored_status_count/402': 1,
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 11,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 191209472,
+ 'memusage/startup': 191209472,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 12, 0, 25, 42, 938813)}
+2020-01-12 08:25:45 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-01-12 08:26:43 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:26:43 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:26:43 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:26:43 [scrapy.extensions.telnet] INFO: Telnet Password: 3169a7a966a32984
+2020-01-12 08:26:43 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:26:43 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:26:43 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:26:43 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:26:43 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:26:43 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:26:43 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:26:43 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:26:43 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6025
+2020-01-12 08:26:45 [scrapy.downloadermiddlewares.cookies] DEBUG: Sending cookies to: <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>
+Cookie: ywkey=ywU2vsg9bL87; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680719; loginType=4; lgk=1; QDInfo=7RNRLX6Ck3KY5aWgMB84vrDdhMzPrkpyDrEIbrK0xJ397r2LvU5C5GT/C+ZfDcXIJ31Wvz7+FUbq8Zq3x19Zb1bGTyTu9PdALkTI9pqfeKww7aaaXneUlPBoSj/lk+4WrR0i8gKJff5LnxGCx/dbBgcRovabb1mg; cmfuToken=N((a0tJD3qrhLwUlsfEdzYe8BGppxeaTlihPKPLV5s7gABtAYNbjA3TI3c-3WZZLKJcPHEH4_PX120g9QhXRkQbnStZbjyt6XzqgpXTaL8qIQJLGPxEGjQna3QMz-Rb0BQIrDa-U4s1XaEFjFsWlrO_KlhZtaCX1l8trfyz4UHh4TlxYddDEYeLjxMXoMfHyrIzQhNU1hr0E2h6GFWffUyyQomTr7d3Sgm-FVUd2JdBqVXHagoI3ps1_BxgXfZakGmg0; usertoken=5880124
+
+2020-01-12 08:26:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0> (referer: None)
+2020-01-12 08:26:46 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-12 08:26:46 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1495,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 7063,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 2.45555,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 12, 0, 26, 46, 430545),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 191864832,
+ 'memusage/startup': 191864832,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 12, 0, 26, 43, 974995)}
+2020-01-12 08:26:46 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-01-12 08:41:04 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:41:04 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:41:04 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:41:04 [scrapy.extensions.telnet] INFO: Telnet Password: 6f1bd978fbb044b8
+2020-01-12 08:41:04 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:41:04 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:41:04 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:41:04 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:41:04 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:41:04 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:41:04 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:41:04 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:41:04 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6024
+2020-01-12 08:41:06 [scrapy.downloadermiddlewares.cookies] DEBUG: Sending cookies to: <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>
+Cookie: ywkey=ywU2vsg9bL87; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680719; loginType=4; lgk=1; QDInfo=7RNRLX6Ck3KY5aWgMB84vrDdhMzPrkpyDrEIbrK0xJ397r2LvU5C5GT/C+ZfDcXIJ31Wvz7+FUbq8Zq3x19Zb1bGTyTu9PdALkTI9pqfeKww7aaaXneUlDIdljuKP6eXxDVmyLCU9kWiAp/c1DQgWUeVarBpm3k9; cmfuToken=N((a0tJD3qrhLwUlsfEdzYe8BGppxeaTlihPKPLV5s7gABtAYNbjA3TI3c-3WZZLKJcPHEH4_PX120g9QhXRkQbnStZbjyt6XzqgpXTaL8qIQJLGPxEGjQna3QMz-Rb0BQIrDa-U4s1XaEFjFsWlrO_KlhZtaCX1l8trfyz4UHh4TlxYddDEYeLjxMXoMfHyrIzQhNU1hr0E2h6GFWffUyyQomTr7d3Sgm-FVUd2JdBqVXHagoI3ps1_BxgXfZakGmg0; usertoken=5880124
+
+2020-01-12 08:41:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0> (referer: None)
+2020-01-12 08:41:06 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-12 08:41:06 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1495,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 8252,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 2.051394,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 12, 0, 41, 6, 894552),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 190418944,
+ 'memusage/startup': 190418944,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 12, 0, 41, 4, 843158)}
+2020-01-12 08:41:06 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-01-12 08:41:10 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:41:10 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:41:10 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:41:10 [scrapy.extensions.telnet] INFO: Telnet Password: c28ef2f340a23b7a
+2020-01-12 08:41:10 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:41:10 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:41:10 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:41:10 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:41:10 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:41:10 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:41:10 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:41:10 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:41:10 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6024
+2020-01-12 08:41:13 [scrapy.downloadermiddlewares.cookies] DEBUG: Sending cookies to: <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>
+Cookie: ywkey=ywU2vsg9bL87; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680719; loginType=4; lgk=1; QDInfo=7RNRLX6Ck3KY5aWgMB84vrDdhMzPrkpyDrEIbrK0xJ397r2LvU5C5GT/C+ZfDcXIJ31Wvz7+FUbq8Zq3x19Zb1bGTyTu9PdALkTI9pqfeKww7aaaXneUlKhntVnnowinLBurHs9nQ0u6Glma+DDDcuFETcv7yhdW; cmfuToken=N((a0tJD3qrhLwUlsfEdzYe8BGppxeaTlihPKPLV5s7gABtAYNbjA3TI3c-3WZZLKJcPHEH4_PX120g9QhXRkQbnStZbjyt6XzqgpXTaL8qIQJLGPxEGjQna3QMz-Rb0BQIrDa-U4s1XaEFjFsWlrO_KlhZtaCX1l8trfyz4UHh4TlxYddDEYeLjxMXoMfHyrIzQhNU1hr0E2h6GFWffUyyQomTr7d3Sgm-FVUd2JdBqVXHagoI3ps1_BxgXfZakGmg0; usertoken=5880124
+
+2020-01-12 08:41:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0> (referer: None)
+2020-01-12 08:41:13 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-12 08:41:13 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1495,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 8248,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 2.86185,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 12, 0, 41, 13, 720182),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 190578688,
+ 'memusage/startup': 190578688,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 12, 0, 41, 10, 858332)}
+2020-01-12 08:41:13 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-01-12 08:41:14 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:41:14 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:41:14 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:41:14 [scrapy.extensions.telnet] INFO: Telnet Password: b8848d02d80da34e
+2020-01-12 08:41:14 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:41:15 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:41:15 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:41:15 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:41:15 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:41:15 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:41:15 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:41:15 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:41:15 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6025
+2020-01-12 08:41:19 [scrapy.downloadermiddlewares.cookies] DEBUG: Sending cookies to: <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>
+Cookie: ywkey=ywU2vsg9bL87; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680719; loginType=4; lgk=1; QDInfo=7RNRLX6Ck3KY5aWgMB84vrDdhMzPrkpyDrEIbrK0xJ397r2LvU5C5GT/C+ZfDcXIJ31Wvz7+FUbq8Zq3x19Zb1bGTyTu9PdALkTI9pqfeKww7aaaXneUlEaqlM1ghG5yqF0iN4F7qiOCAYd69oIM+ihvHgin5KhE; cmfuToken=N((a0tJD3qrhLwUlsfEdzYe8BGppxeaTlihPKPLV5s7gABtAYNbjA3TI3c-3WZZLKJcPHEH4_PX120g9QhXRkQbnStZbjyt6XzqgpXTaL8qIQJLGPxEGjQna3QMz-Rb0BQIrDa-U4s1XaEFjFsWlrO_KlhZtaCX1l8trfyz4UHh4TlxYddDEYeLjxMXoMfHyrIzQhNU1hr0E2h6GFWffUyyQomTr7d3Sgm-FVUd2JdBqVXHagoI3ps1_BxgXfZakGmg0; usertoken=5880124
+
+2020-01-12 08:41:19 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:41:19 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:41:19 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:41:19 [scrapy.extensions.telnet] INFO: Telnet Password: 66f694242aa8b6b2
+2020-01-12 08:41:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0> (referer: None)
+2020-01-12 08:41:19 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:41:20 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-12 08:41:20 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1495,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 8248,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 4.501034,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 12, 0, 41, 20, 95941),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 190644224,
+ 'memusage/startup': 190644224,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 12, 0, 41, 15, 594907)}
+2020-01-12 08:41:20 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-01-12 08:41:20 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:41:20 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:41:21 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:41:21 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:41:21 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:41:21 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:41:21 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:41:21 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6025
+2020-01-12 08:41:24 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:41:24 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:41:24 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:41:24 [scrapy.extensions.telnet] INFO: Telnet Password: 052f9b5baf688d52
+2020-01-12 08:41:24 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:41:25 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:41:25 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:41:25 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:41:25 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:41:25 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:41:25 [scrapy.downloadermiddlewares.cookies] DEBUG: Sending cookies to: <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>
+Cookie: ywkey=ywU2vsg9bL87; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680719; loginType=4; lgk=1; QDInfo=7RNRLX6Ck3KY5aWgMB84vrDdhMzPrkpyDrEIbrK0xJ397r2LvU5C5GT/C+ZfDcXIJ31Wvz7+FUbq8Zq3x19Zb1bGTyTu9PdALkTI9pqfeKww7aaaXneUlMpmJoMcIAXdVA5NCJOrXZzEHOMmcENR9iWPnBvDorTP; cmfuToken=N((a0tJD3qrhLwUlsfEdzYe8BGppxeaTlihPKPLV5s7gABtAYNbjA3TI3c-3WZZLKJcPHEH4_PX120g9QhXRkQbnStZbjyt6XzqgpXTaL8qIQJLGPxEGjQna3QMz-Rb0BQIrDa-U4s1XaEFjFsWlrO_KlhZtaCX1l8trfyz4UHh4TlxYddDEYeLjxMXoMfHyrIzQhNU1hr0E2h6GFWffUyyQomTr7d3Sgm-FVUd2JdBqVXHagoI3ps1_BxgXfZakGmg0; usertoken=5880124
+
+2020-01-12 08:41:25 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:41:25 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:41:25 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6027
+2020-01-12 08:41:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0> (referer: None)
+2020-01-12 08:41:26 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-12 08:41:26 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1495,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 8252,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 5.544556,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 12, 0, 41, 26, 670696),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 190676992,
+ 'memusage/startup': 190676992,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 12, 0, 41, 21, 126140)}
+2020-01-12 08:41:26 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-01-12 08:41:29 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:41:29 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:41:29 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:41:30 [scrapy.extensions.telnet] INFO: Telnet Password: 30fa951d0aae46f9
+2020-01-12 08:41:30 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:41:31 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:41:31 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:41:31 [scrapy.downloadermiddlewares.cookies] DEBUG: Sending cookies to: <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>
+Cookie: ywkey=ywU2vsg9bL87; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680719; loginType=4; lgk=1; QDInfo=7RNRLX6Ck3KY5aWgMB84vrDdhMzPrkpyDrEIbrK0xJ397r2LvU5C5GT/C+ZfDcXIJ31Wvz7+FUbq8Zq3x19Zb1bGTyTu9PdALkTI9pqfeKww7aaaXneUlKAPbhskWllT3MW5OAc537zqzSHCb4eB/cY1ij+VomSU; cmfuToken=N((a0tJD3qrhLwUlsfEdzYe8BGppxeaTlihPKPLV5s7gABtAYNbjA3TI3c-3WZZLKJcPHEH4_PX120g9QhXRkQbnStZbjyt6XzqgpXTaL8qIQJLGPxEGjQna3QMz-Rb0BQIrDa-U4s1XaEFjFsWlrO_KlhZtaCX1l8trfyz4UHh4TlxYddDEYeLjxMXoMfHyrIzQhNU1hr0E2h6GFWffUyyQomTr7d3Sgm-FVUd2JdBqVXHagoI3ps1_BxgXfZakGmg0; usertoken=5880124
+
+2020-01-12 08:41:31 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:41:31 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:41:31 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:41:31 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:41:31 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:41:31 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6028
+2020-01-12 08:41:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0> (referer: None)
+2020-01-12 08:41:32 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-12 08:41:32 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1495,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 8248,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 6.859893,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 12, 0, 41, 32, 786443),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 189075456,
+ 'memusage/startup': 189075456,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 12, 0, 41, 25, 926550)}
+2020-01-12 08:41:32 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-01-12 08:41:34 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:41:35 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:41:35 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:41:35 [scrapy.extensions.telnet] INFO: Telnet Password: 7bc2c491ff80c5b4
+2020-01-12 08:41:35 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:41:37 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:41:37 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:41:37 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:41:37 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:41:37 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:41:37 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:41:38 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:41:38 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-01-12 08:41:38 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:41:38 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:41:38 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:41:38 [scrapy.extensions.telnet] INFO: Telnet Password: b4ba2d836c2c403c
+2020-01-12 08:41:39 [scrapy.downloadermiddlewares.cookies] DEBUG: Sending cookies to: <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>
+Cookie: ywkey=ywU2vsg9bL87; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680719; loginType=4; lgk=1; QDInfo=7RNRLX6Ck3KY5aWgMB84vrDdhMzPrkpyDrEIbrK0xJ397r2LvU5C5GT/C+ZfDcXIJ31Wvz7+FUbq8Zq3x19Zb1bGTyTu9PdALkTI9pqfeKww7aaaXneUlPEPmHnRRa66sw+cl2hxlRP8+WRMNuyx6xttXJYrG6cD; cmfuToken=N((a0tJD3qrhLwUlsfEdzYe8BGppxeaTlihPKPLV5s7gABtAYNbjA3TI3c-3WZZLKJcPHEH4_PX120g9QhXRkQbnStZbjyt6XzqgpXTaL8qIQJLGPxEGjQna3QMz-Rb0BQIrDa-U4s1XaEFjFsWlrO_KlhZtaCX1l8trfyz4UHh4TlxYddDEYeLjxMXoMfHyrIzQhNU1hr0E2h6GFWffUyyQomTr7d3Sgm-FVUd2JdBqVXHagoI3ps1_BxgXfZakGmg0; usertoken=5880124
+
+2020-01-12 08:41:39 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:41:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0> (referer: None)
+2020-01-12 08:41:40 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-12 08:41:40 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1495,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 8252,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 8.966964,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 12, 0, 41, 40, 701205),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 189804544,
+ 'memusage/startup': 189804544,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 12, 0, 41, 31, 734241)}
+2020-01-12 08:41:40 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-01-12 08:41:41 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:41:41 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:41:41 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:41:41 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:41:41 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:41:42 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:41:42 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:41:42 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6031
+2020-01-12 08:41:44 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:41:44 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:41:44 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:41:45 [scrapy.extensions.telnet] INFO: Telnet Password: 2c8e7fc760fb69e2
+2020-01-12 08:41:45 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:41:47 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:41:47 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:41:48 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:41:48 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:41:48 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:41:48 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:41:48 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:41:48 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6033
+2020-01-12 08:41:50 [scrapy.downloadermiddlewares.cookies] DEBUG: Sending cookies to: <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>
+Cookie: ywkey=ywU2vsg9bL87; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680719; loginType=4; lgk=1; QDInfo=7RNRLX6Ck3KY5aWgMB84vrDdhMzPrkpyDrEIbrK0xJ397r2LvU5C5GT/C+ZfDcXIJ31Wvz7+FUbq8Zq3x19Zb1bGTyTu9PdALkTI9pqfeKww7aaaXneUlJUMpWZA1+Kha3k5dnIDjBTT4lOi28v5LIh9m7obcyag; cmfuToken=N((a0tJD3qrhLwUlsfEdzYe8BGppxeaTlihPKPLV5s7gABtAYNbjA3TI3c-3WZZLKJcPHEH4_PX120g9QhXRkQbnStZbjyt6XzqgpXTaL8qIQJLGPxEGjQna3QMz-Rb0BQIrDa-U4s1XaEFjFsWlrO_KlhZtaCX1l8trfyz4UHh4TlxYddDEYeLjxMXoMfHyrIzQhNU1hr0E2h6GFWffUyyQomTr7d3Sgm-FVUd2JdBqVXHagoI3ps1_BxgXfZakGmg0; usertoken=5880124
+
+2020-01-12 08:41:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0> (referer: None)
+2020-01-12 08:41:54 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-12 08:41:54 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1495,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 8252,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 16.754352,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 12, 0, 41, 54, 761182),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 188379136,
+ 'memusage/startup': 188379136,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 12, 0, 41, 38, 6830)}
+2020-01-12 08:41:54 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-01-12 08:41:59 [scrapy.downloadermiddlewares.cookies] DEBUG: Sending cookies to: <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>
+Cookie: ywkey=ywU2vsg9bL87; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680719; loginType=4; lgk=1; QDInfo=7RNRLX6Ck3KY5aWgMB84vrDdhMzPrkpyDrEIbrK0xJ397r2LvU5C5GT/C+ZfDcXIJ31Wvz7+FUbq8Zq3x19Zb1bGTyTu9PdALkTI9pqfeKww7aaaXneUlP4c7gge/sFff2g9nFqsLswA5hLjySzKjephCFNrdKZC; cmfuToken=N((a0tJD3qrhLwUlsfEdzYe8BGppxeaTlihPKPLV5s7gABtAYNbjA3TI3c-3WZZLKJcPHEH4_PX120g9QhXRkQbnStZbjyt6XzqgpXTaL8qIQJLGPxEGjQna3QMz-Rb0BQIrDa-U4s1XaEFjFsWlrO_KlhZtaCX1l8trfyz4UHh4TlxYddDEYeLjxMXoMfHyrIzQhNU1hr0E2h6GFWffUyyQomTr7d3Sgm-FVUd2JdBqVXHagoI3ps1_BxgXfZakGmg0; usertoken=5880124
+
+2020-01-12 08:42:03 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:42:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0> (referer: None)
+2020-01-12 08:42:07 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-12 08:42:07 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1495,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 8248,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 25.430978,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 12, 0, 42, 7, 487061),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 185057280,
+ 'memusage/startup': 185057280,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 12, 0, 41, 42, 56083)}
+2020-01-12 08:42:07 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-01-12 08:42:08 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:42:08 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:42:12 [scrapy.extensions.telnet] INFO: Telnet Password: 5bb5550e82ae4819
+2020-01-12 08:42:18 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:46:08 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:46:08 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:46:08 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:46:08 [scrapy.extensions.telnet] INFO: Telnet Password: 09893044ebdbf603
+2020-01-12 08:46:08 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:46:09 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:46:09 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:46:09 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:46:09 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:46:09 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:46:09 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:46:09 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:46:09 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-01-12 08:46:11 [scrapy.downloadermiddlewares.cookies] DEBUG: Sending cookies to: <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>
+Cookie: ywkey=ywU2vsg9bL87; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680719; loginType=4; lgk=1; QDInfo=7RNRLX6Ck3KY5aWgMB84vrDdhMzPrkpyDrEIbrK0xJ397r2LvU5C5GT/C+ZfDcXIJ31Wvz7+FUbq8Zq3x19Zb1bGTyTu9PdALkTI9pqfeKww7aaaXneUlHRl34yDFpnnmUaH7oTpmBOXGPy+1Zy6sedKnALZ024E; cmfuToken=N((a0tJD3qrhLwUlsfEdzYe8BGppxeaTlihPKPLV5s7gABtAYNbjA3TI3c-3WZZLKJcPHEH4_PX120g9QhXRkQbnStZbjyt6XzqgpXTaL8qIQJLGPxEGjQna3QMz-Rb0BQIrDa-U4s1XaEFjFsWlrO_KlhZtaCX1l8trfyz4UHh4TlxYddDEYeLjxMXoMfHyrIzQhNU1hr0E2h6GFWffUyyQomTr7d3Sgm-FVUd2JdBqVXHagoI3ps1_BxgXfZakGmg0; usertoken=5880124
+
+2020-01-12 08:46:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0> (referer: None)
+2020-01-12 08:46:11 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-12 08:46:11 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1495,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 8636,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 2.624786,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 12, 0, 46, 11, 779268),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 191377408,
+ 'memusage/startup': 191377408,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 12, 0, 46, 9, 154482)}
+2020-01-12 08:46:11 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-01-12 08:46:13 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:46:13 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:46:13 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:46:13 [scrapy.extensions.telnet] INFO: Telnet Password: 701476717862fe96
+2020-01-12 08:46:13 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:46:13 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:46:13 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:46:13 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:46:13 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:46:13 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:46:13 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:46:14 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:46:14 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-01-12 08:46:16 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:46:16 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:46:16 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:46:16 [scrapy.downloadermiddlewares.cookies] DEBUG: Sending cookies to: <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>
+Cookie: ywkey=ywU2vsg9bL87; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680719; loginType=4; lgk=1; QDInfo=7RNRLX6Ck3KY5aWgMB84vrDdhMzPrkpyDrEIbrK0xJ397r2LvU5C5GT/C+ZfDcXIJ31Wvz7+FUbq8Zq3x19Zb1bGTyTu9PdALkTI9pqfeKww7aaaXneUlOuyZjLTAQBpIuGiI9eVoznelotbQeS9i5F0wKjStlS8; cmfuToken=N((a0tJD3qrhLwUlsfEdzYe8BGppxeaTlihPKPLV5s7gABtAYNbjA3TI3c-3WZZLKJcPHEH4_PX120g9QhXRkQbnStZbjyt6XzqgpXTaL8qIQJLGPxEGjQna3QMz-Rb0BQIrDa-U4s1XaEFjFsWlrO_KlhZtaCX1l8trfyz4UHh4TlxYddDEYeLjxMXoMfHyrIzQhNU1hr0E2h6GFWffUyyQomTr7d3Sgm-FVUd2JdBqVXHagoI3ps1_BxgXfZakGmg0; usertoken=5880124
+
+2020-01-12 08:46:16 [scrapy.extensions.telnet] INFO: Telnet Password: 80d0a76ef2a37e2d
+2020-01-12 08:46:17 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:46:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0> (referer: None)
+2020-01-12 08:46:17 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-12 08:46:17 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1495,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 8240,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 3.382896,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 12, 0, 46, 17, 392566),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 191438848,
+ 'memusage/startup': 191438848,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 12, 0, 46, 14, 9670)}
+2020-01-12 08:46:17 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-01-12 08:46:17 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:46:17 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:46:17 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:46:17 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:46:17 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:46:17 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:46:17 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:46:17 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-01-12 08:46:18 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:46:18 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:46:18 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:46:18 [scrapy.extensions.telnet] INFO: Telnet Password: 83bb6998757d86d9
+2020-01-12 08:46:18 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:46:19 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:46:19 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:46:19 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:46:19 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:46:19 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:46:19 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:46:19 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:46:19 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6026
+2020-01-12 08:46:21 [scrapy.downloadermiddlewares.cookies] DEBUG: Sending cookies to: <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>
+Cookie: ywkey=ywU2vsg9bL87; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680719; loginType=4; lgk=1; QDInfo=7RNRLX6Ck3KY5aWgMB84vrDdhMzPrkpyDrEIbrK0xJ397r2LvU5C5GT/C+ZfDcXIJ31Wvz7+FUbq8Zq3x19Zb1bGTyTu9PdALkTI9pqfeKww7aaaXneUlH+SRguKuCsrRvbuHql0rkViGJSPuAIAZBm1Ul//9bTP; cmfuToken=N((a0tJD3qrhLwUlsfEdzYe8BGppxeaTlihPKPLV5s7gABtAYNbjA3TI3c-3WZZLKJcPHEH4_PX120g9QhXRkQbnStZbjyt6XzqgpXTaL8qIQJLGPxEGjQna3QMz-Rb0BQIrDa-U4s1XaEFjFsWlrO_KlhZtaCX1l8trfyz4UHh4TlxYddDEYeLjxMXoMfHyrIzQhNU1hr0E2h6GFWffUyyQomTr7d3Sgm-FVUd2JdBqVXHagoI3ps1_BxgXfZakGmg0; usertoken=5880124
+
+2020-01-12 08:46:21 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:46:21 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:46:21 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:46:21 [scrapy.extensions.telnet] INFO: Telnet Password: 73a200fd984801db
+2020-01-12 08:46:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0> (referer: None)
+2020-01-12 08:46:21 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:46:22 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-12 08:46:22 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1495,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 8244,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 4.537229,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 12, 0, 46, 22, 165966),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 191438848,
+ 'memusage/startup': 191438848,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 12, 0, 46, 17, 628737)}
+2020-01-12 08:46:22 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-01-12 08:46:22 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:46:22 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:46:22 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:46:22 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:46:22 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:46:22 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:46:22 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:46:22 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-01-12 08:46:23 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:46:23 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:46:23 [scrapy.downloadermiddlewares.cookies] DEBUG: Sending cookies to: <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>
+Cookie: ywkey=ywU2vsg9bL87; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680719; loginType=4; lgk=1; QDInfo=7RNRLX6Ck3KY5aWgMB84vrDdhMzPrkpyDrEIbrK0xJ397r2LvU5C5GT/C+ZfDcXIJ31Wvz7+FUbq8Zq3x19Zb1bGTyTu9PdALkTI9pqfeKww7aaaXneUlFR6JkJ4sJKQ0Wm07NgDAbPINAxmnG+efi9fDaSDDZbU; cmfuToken=N((a0tJD3qrhLwUlsfEdzYe8BGppxeaTlihPKPLV5s7gABtAYNbjA3TI3c-3WZZLKJcPHEH4_PX120g9QhXRkQbnStZbjyt6XzqgpXTaL8qIQJLGPxEGjQna3QMz-Rb0BQIrDa-U4s1XaEFjFsWlrO_KlhZtaCX1l8trfyz4UHh4TlxYddDEYeLjxMXoMfHyrIzQhNU1hr0E2h6GFWffUyyQomTr7d3Sgm-FVUd2JdBqVXHagoI3ps1_BxgXfZakGmg0; usertoken=5880124
+
+2020-01-12 08:46:23 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:46:23 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:46:23 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:46:23 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:46:24 [scrapy.extensions.telnet] INFO: Telnet Password: f66e67e94fd447b0
+2020-01-12 08:46:24 [scrapy.extensions.telnet] INFO: Telnet Password: 31b876b7213ed9a6
+2020-01-12 08:46:24 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:46:24 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:46:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0> (referer: None)
+2020-01-12 08:46:24 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-12 08:46:24 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1495,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 8244,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 5.279842,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 12, 0, 46, 24, 943208),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 191422464,
+ 'memusage/startup': 191422464,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 12, 0, 46, 19, 663366)}
+2020-01-12 08:46:24 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-01-12 08:46:24 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:46:25 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:46:25 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:46:25 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:46:25 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:46:25 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:46:25 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:46:25 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:46:25 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:46:25 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6026
+2020-01-12 08:46:25 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:46:25 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:46:25 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:46:25 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:46:25 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:46:25 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6028
+2020-01-12 08:46:25 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:46:26 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:46:26 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:46:26 [scrapy.extensions.telnet] INFO: Telnet Password: be7bee4f23e2b8fa
+2020-01-12 08:46:26 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:46:27 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:46:27 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:46:27 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:46:27 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:46:27 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:46:27 [scrapy.extensions.telnet] INFO: Telnet Password: 680e1bb5ce5fb844
+2020-01-12 08:46:27 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:46:27 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:46:27 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:46:27 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:46:27 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:46:27 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:46:27 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6029
+2020-01-12 08:46:28 [scrapy.downloadermiddlewares.cookies] DEBUG: Sending cookies to: <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>
+Cookie: ywkey=ywU2vsg9bL87; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680719; loginType=4; lgk=1; QDInfo=7RNRLX6Ck3KY5aWgMB84vrDdhMzPrkpyDrEIbrK0xJ397r2LvU5C5GT/C+ZfDcXIJ31Wvz7+FUbq8Zq3x19Zb1bGTyTu9PdALkTI9pqfeKww7aaaXneUlB9b6ugKbjGKdQX8PkVesEG4EWq2Fn6ApnyhoBJYArHc; cmfuToken=N((a0tJD3qrhLwUlsfEdzYe8BGppxeaTlihPKPLV5s7gABtAYNbjA3TI3c-3WZZLKJcPHEH4_PX120g9QhXRkQbnStZbjyt6XzqgpXTaL8qIQJLGPxEGjQna3QMz-Rb0BQIrDa-U4s1XaEFjFsWlrO_KlhZtaCX1l8trfyz4UHh4TlxYddDEYeLjxMXoMfHyrIzQhNU1hr0E2h6GFWffUyyQomTr7d3Sgm-FVUd2JdBqVXHagoI3ps1_BxgXfZakGmg0; usertoken=5880124
+
+2020-01-12 08:46:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0> (referer: None)
+2020-01-12 08:46:28 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:46:29 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:46:29 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-12 08:46:29 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:46:29 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:46:29 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1495,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 8244,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 6.305393,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 12, 0, 46, 29, 244367),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 191471616,
+ 'memusage/startup': 191471616,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 12, 0, 46, 22, 938974)}
+2020-01-12 08:46:29 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-01-12 08:46:29 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:46:29 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:46:29 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:46:29 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-01-12 08:46:30 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:46:30 [scrapy.downloadermiddlewares.cookies] DEBUG: Sending cookies to: <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>
+Cookie: ywkey=ywU2vsg9bL87; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680719; loginType=4; lgk=1; QDInfo=7RNRLX6Ck3KY5aWgMB84vrDdhMzPrkpyDrEIbrK0xJ397r2LvU5C5GT/C+ZfDcXIJ31Wvz7+FUbq8Zq3x19Zb1bGTyTu9PdALkTI9pqfeKww7aaaXneUlMnEFpnHpl/16Nd7sCRopXrLmEMi9Sqt2oLNwH1Fmw9D; cmfuToken=N((a0tJD3qrhLwUlsfEdzYe8BGppxeaTlihPKPLV5s7gABtAYNbjA3TI3c-3WZZLKJcPHEH4_PX120g9QhXRkQbnStZbjyt6XzqgpXTaL8qIQJLGPxEGjQna3QMz-Rb0BQIrDa-U4s1XaEFjFsWlrO_KlhZtaCX1l8trfyz4UHh4TlxYddDEYeLjxMXoMfHyrIzQhNU1hr0E2h6GFWffUyyQomTr7d3Sgm-FVUd2JdBqVXHagoI3ps1_BxgXfZakGmg0; usertoken=5880124
+
+2020-01-12 08:46:30 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:46:30 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:46:31 [scrapy.downloadermiddlewares.cookies] DEBUG: Sending cookies to: <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>
+Cookie: ywkey=ywU2vsg9bL87; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680719; loginType=4; lgk=1; QDInfo=7RNRLX6Ck3KY5aWgMB84vrDdhMzPrkpyDrEIbrK0xJ397r2LvU5C5GT/C+ZfDcXIJ31Wvz7+FUbq8Zq3x19Zb1bGTyTu9PdALkTI9pqfeKww7aaaXneUlNELKjyzLBl2iQWYkajRUnLWTgz9anbdzvLdEQtmab1e; cmfuToken=N((a0tJD3qrhLwUlsfEdzYe8BGppxeaTlihPKPLV5s7gABtAYNbjA3TI3c-3WZZLKJcPHEH4_PX120g9QhXRkQbnStZbjyt6XzqgpXTaL8qIQJLGPxEGjQna3QMz-Rb0BQIrDa-U4s1XaEFjFsWlrO_KlhZtaCX1l8trfyz4UHh4TlxYddDEYeLjxMXoMfHyrIzQhNU1hr0E2h6GFWffUyyQomTr7d3Sgm-FVUd2JdBqVXHagoI3ps1_BxgXfZakGmg0; usertoken=5880124
+
+2020-01-12 08:46:31 [scrapy.extensions.telnet] INFO: Telnet Password: 16be6cf152fc26ff
+2020-01-12 08:46:31 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:46:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0> (referer: None)
+2020-01-12 08:46:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0> (referer: None)
+2020-01-12 08:46:31 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-12 08:46:31 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-12 08:46:31 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1495,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 8240,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 6.25714,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 12, 0, 46, 31, 813369),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 191377408,
+ 'memusage/startup': 191377408,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 12, 0, 46, 25, 556229)}
+2020-01-12 08:46:31 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-01-12 08:46:31 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1495,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 8240,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 6.675927,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 12, 0, 46, 31, 967115),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 191365120,
+ 'memusage/startup': 191365120,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 12, 0, 46, 25, 291188)}
+2020-01-12 08:46:31 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-01-12 08:46:32 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:46:32 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:46:32 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:46:32 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:46:32 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:46:32 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:46:32 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:46:32 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:46:32 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:46:32 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:46:32 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6025
+2020-01-12 08:46:32 [scrapy.extensions.telnet] INFO: Telnet Password: 9f79210bdb3f3dc7
+2020-01-12 08:46:33 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:46:33 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:46:33 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:46:33 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:46:34 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:46:34 [scrapy.downloadermiddlewares.cookies] DEBUG: Sending cookies to: <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>
+Cookie: ywkey=ywU2vsg9bL87; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680719; loginType=4; lgk=1; QDInfo=7RNRLX6Ck3KY5aWgMB84vrDdhMzPrkpyDrEIbrK0xJ397r2LvU5C5GT/C+ZfDcXIJ31Wvz7+FUbq8Zq3x19Zb1bGTyTu9PdALkTI9pqfeKww7aaaXneUlAjxg5jo/FeTeil9c3WL+RbQApIjuV7dD/P+Q9A2T8CH; cmfuToken=N((a0tJD3qrhLwUlsfEdzYe8BGppxeaTlihPKPLV5s7gABtAYNbjA3TI3c-3WZZLKJcPHEH4_PX120g9QhXRkQbnStZbjyt6XzqgpXTaL8qIQJLGPxEGjQna3QMz-Rb0BQIrDa-U4s1XaEFjFsWlrO_KlhZtaCX1l8trfyz4UHh4TlxYddDEYeLjxMXoMfHyrIzQhNU1hr0E2h6GFWffUyyQomTr7d3Sgm-FVUd2JdBqVXHagoI3ps1_BxgXfZakGmg0; usertoken=5880124
+
+2020-01-12 08:46:34 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:46:34 [scrapy.extensions.telnet] INFO: Telnet Password: e7ae275455f6d31d
+2020-01-12 08:46:34 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:46:34 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:46:34 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:46:34 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:46:34 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:46:34 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:46:34 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6024
+2020-01-12 08:46:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0> (referer: None)
+2020-01-12 08:46:35 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-12 08:46:35 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1495,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 8240,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 7.609737,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 12, 0, 46, 35, 557058),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 189853696,
+ 'memusage/startup': 189853696,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 12, 0, 46, 27, 947321)}
+2020-01-12 08:46:35 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-01-12 08:46:35 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:46:35 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:46:35 [scrapy.downloadermiddlewares.cookies] DEBUG: Sending cookies to: <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>
+Cookie: ywkey=ywU2vsg9bL87; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680719; loginType=4; lgk=1; QDInfo=7RNRLX6Ck3KY5aWgMB84vrDdhMzPrkpyDrEIbrK0xJ397r2LvU5C5GT/C+ZfDcXIJ31Wvz7+FUbq8Zq3x19Zb1bGTyTu9PdALkTI9pqfeKww7aaaXneUlBY7JUjfZ6pRhmUvsReU+pCcoi9bauiDL+JjG5ajMSSa; cmfuToken=N((a0tJD3qrhLwUlsfEdzYe8BGppxeaTlihPKPLV5s7gABtAYNbjA3TI3c-3WZZLKJcPHEH4_PX120g9QhXRkQbnStZbjyt6XzqgpXTaL8qIQJLGPxEGjQna3QMz-Rb0BQIrDa-U4s1XaEFjFsWlrO_KlhZtaCX1l8trfyz4UHh4TlxYddDEYeLjxMXoMfHyrIzQhNU1hr0E2h6GFWffUyyQomTr7d3Sgm-FVUd2JdBqVXHagoI3ps1_BxgXfZakGmg0; usertoken=5880124
+
+2020-01-12 08:46:36 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:46:36 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:46:36 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:46:36 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:46:36 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:46:36 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:46:36 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:46:36 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:46:36 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6028
+2020-01-12 08:46:36 [scrapy.extensions.telnet] INFO: Telnet Password: 259179bc91297238
+2020-01-12 08:46:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0> (referer: None)
+2020-01-12 08:46:37 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-12 08:46:37 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1495,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 8640,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 7.728979,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 12, 0, 46, 37, 46013),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 190357504,
+ 'memusage/startup': 190357504,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 12, 0, 46, 29, 317034)}
+2020-01-12 08:46:37 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-01-12 08:46:37 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:46:38 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:46:38 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:46:38 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:46:38 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:46:38 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:46:38 [scrapy.extensions.telnet] INFO: Telnet Password: b6189d22a5f2a747
+2020-01-12 08:46:39 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:46:39 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:46:39 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:46:39 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:46:39 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:46:39 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6030
+2020-01-12 08:46:39 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:46:40 [scrapy.downloadermiddlewares.cookies] DEBUG: Sending cookies to: <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>
+Cookie: ywkey=ywU2vsg9bL87; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680719; loginType=4; lgk=1; QDInfo=7RNRLX6Ck3KY5aWgMB84vrDdhMzPrkpyDrEIbrK0xJ397r2LvU5C5GT/C+ZfDcXIJ31Wvz7+FUbq8Zq3x19Zb1bGTyTu9PdALkTI9pqfeKww7aaaXneUlGEmeXWbsme+vfD50PjHZb3EPpftsBImQrDWHcriyjou; cmfuToken=N((a0tJD3qrhLwUlsfEdzYe8BGppxeaTlihPKPLV5s7gABtAYNbjA3TI3c-3WZZLKJcPHEH4_PX120g9QhXRkQbnStZbjyt6XzqgpXTaL8qIQJLGPxEGjQna3QMz-Rb0BQIrDa-U4s1XaEFjFsWlrO_KlhZtaCX1l8trfyz4UHh4TlxYddDEYeLjxMXoMfHyrIzQhNU1hr0E2h6GFWffUyyQomTr7d3Sgm-FVUd2JdBqVXHagoI3ps1_BxgXfZakGmg0; usertoken=5880124
+
+2020-01-12 08:46:40 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:46:41 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:46:41 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:46:41 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:46:41 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:46:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0> (referer: None)
+2020-01-12 08:46:41 [scrapy.extensions.telnet] INFO: Telnet Password: bcbda5365a87c581
+2020-01-12 08:46:41 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:46:41 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:46:41 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:46:41 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-12 08:46:41 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1495,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 8240,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 9.166067,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 12, 0, 46, 41, 934292),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 190574592,
+ 'memusage/startup': 190574592,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 12, 0, 46, 32, 768225)}
+2020-01-12 08:46:41 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-01-12 08:46:42 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:46:42 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:46:42 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6025
+2020-01-12 08:46:42 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:46:43 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:46:43 [scrapy.downloadermiddlewares.cookies] DEBUG: Sending cookies to: <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>
+Cookie: ywkey=ywU2vsg9bL87; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680719; loginType=4; lgk=1; QDInfo=7RNRLX6Ck3KY5aWgMB84vrDdhMzPrkpyDrEIbrK0xJ397r2LvU5C5GT/C+ZfDcXIJ31Wvz7+FUbq8Zq3x19Zb1bGTyTu9PdALkTI9pqfeKww7aaaXneUlF4uRdK50fprCaPsebO+xSdh+HwIGSQJ+XqsmVbi97T8; cmfuToken=N((a0tJD3qrhLwUlsfEdzYe8BGppxeaTlihPKPLV5s7gABtAYNbjA3TI3c-3WZZLKJcPHEH4_PX120g9QhXRkQbnStZbjyt6XzqgpXTaL8qIQJLGPxEGjQna3QMz-Rb0BQIrDa-U4s1XaEFjFsWlrO_KlhZtaCX1l8trfyz4UHh4TlxYddDEYeLjxMXoMfHyrIzQhNU1hr0E2h6GFWffUyyQomTr7d3Sgm-FVUd2JdBqVXHagoI3ps1_BxgXfZakGmg0; usertoken=5880124
+
+2020-01-12 08:46:43 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:46:44 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:46:44 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:46:44 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:46:44 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:46:44 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:46:44 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:46:44 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:46:44 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:46:44 [scrapy.extensions.telnet] INFO: Telnet Password: 6ea3cdeca9566ed3
+2020-01-12 08:46:44 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6031
+2020-01-12 08:46:45 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:46:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0> (referer: None)
+2020-01-12 08:46:46 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-12 08:46:46 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1495,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 8244,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 11.474051,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 12, 0, 46, 46, 193284),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 190492672,
+ 'memusage/startup': 190492672,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 12, 0, 46, 34, 719233)}
+2020-01-12 08:46:46 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:46:46 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-01-12 08:46:46 [scrapy.downloadermiddlewares.cookies] DEBUG: Sending cookies to: <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>
+Cookie: ywkey=ywU2vsg9bL87; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680719; loginType=4; lgk=1; QDInfo=7RNRLX6Ck3KY5aWgMB84vrDdhMzPrkpyDrEIbrK0xJ397r2LvU5C5GT/C+ZfDcXIJ31Wvz7+FUbq8Zq3x19Zb1bGTyTu9PdALkTI9pqfeKww7aaaXneUlK3bErCr4kob7LdeDldoBZ5+6TiFznHxrVsRVsMJ3L7V; cmfuToken=N((a0tJD3qrhLwUlsfEdzYe8BGppxeaTlihPKPLV5s7gABtAYNbjA3TI3c-3WZZLKJcPHEH4_PX120g9QhXRkQbnStZbjyt6XzqgpXTaL8qIQJLGPxEGjQna3QMz-Rb0BQIrDa-U4s1XaEFjFsWlrO_KlhZtaCX1l8trfyz4UHh4TlxYddDEYeLjxMXoMfHyrIzQhNU1hr0E2h6GFWffUyyQomTr7d3Sgm-FVUd2JdBqVXHagoI3ps1_BxgXfZakGmg0; usertoken=5880124
+
+2020-01-12 08:46:46 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:46:46 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:46:47 [scrapy.extensions.telnet] INFO: Telnet Password: 2ca4cd5e8ca3b112
+2020-01-12 08:46:48 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:46:48 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:46:48 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:46:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0> (referer: None)
+2020-01-12 08:46:49 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:46:49 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:46:49 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:46:49 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:46:49 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:46:49 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-12 08:46:49 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1495,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 8244,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 13.117479,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 12, 0, 46, 49, 458223),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 190312448,
+ 'memusage/startup': 190312448,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 12, 0, 46, 36, 340744)}
+2020-01-12 08:46:49 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-01-12 08:46:49 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6029
+2020-01-12 08:46:50 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:46:50 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:46:50 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:46:51 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:46:51 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:46:51 [scrapy.extensions.telnet] INFO: Telnet Password: 0437305422e7041a
+2020-01-12 08:46:51 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:46:51 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:46:52 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:46:52 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:46:52 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:46:52 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:46:52 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6028
+2020-01-12 08:46:53 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:46:53 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:46:53 [scrapy.downloadermiddlewares.cookies] DEBUG: Sending cookies to: <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>
+Cookie: ywkey=ywU2vsg9bL87; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680719; loginType=4; lgk=1; QDInfo=7RNRLX6Ck3KY5aWgMB84vrDdhMzPrkpyDrEIbrK0xJ397r2LvU5C5GT/C+ZfDcXIJ31Wvz7+FUbq8Zq3x19Zb1bGTyTu9PdALkTI9pqfeKww7aaaXneUlALPJv5ksk0KCP3ljLNs9r4icmP84NqVwn2vfEg3yJeI; cmfuToken=N((a0tJD3qrhLwUlsfEdzYe8BGppxeaTlihPKPLV5s7gABtAYNbjA3TI3c-3WZZLKJcPHEH4_PX120g9QhXRkQbnStZbjyt6XzqgpXTaL8qIQJLGPxEGjQna3QMz-Rb0BQIrDa-U4s1XaEFjFsWlrO_KlhZtaCX1l8trfyz4UHh4TlxYddDEYeLjxMXoMfHyrIzQhNU1hr0E2h6GFWffUyyQomTr7d3Sgm-FVUd2JdBqVXHagoI3ps1_BxgXfZakGmg0; usertoken=5880124
+
+2020-01-12 08:46:54 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:46:54 [scrapy.extensions.telnet] INFO: Telnet Password: b92f5614fe33e15a
+2020-01-12 08:46:55 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:46:55 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:46:56 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:46:56 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:46:56 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:46:56 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:46:56 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:46:56 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:46:56 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6034
+2020-01-12 08:46:57 [scrapy.downloadermiddlewares.cookies] DEBUG: Sending cookies to: <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>
+Cookie: ywkey=ywU2vsg9bL87; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680719; loginType=4; lgk=1; QDInfo=7RNRLX6Ck3KY5aWgMB84vrDdhMzPrkpyDrEIbrK0xJ397r2LvU5C5GT/C+ZfDcXIJ31Wvz7+FUbq8Zq3x19Zb1bGTyTu9PdALkTI9pqfeKww7aaaXneUlLxcZucXVUzgpk8RH6tTsErvGGl+erMfxLjL/lVPtC3h; cmfuToken=N((a0tJD3qrhLwUlsfEdzYe8BGppxeaTlihPKPLV5s7gABtAYNbjA3TI3c-3WZZLKJcPHEH4_PX120g9QhXRkQbnStZbjyt6XzqgpXTaL8qIQJLGPxEGjQna3QMz-Rb0BQIrDa-U4s1XaEFjFsWlrO_KlhZtaCX1l8trfyz4UHh4TlxYddDEYeLjxMXoMfHyrIzQhNU1hr0E2h6GFWffUyyQomTr7d3Sgm-FVUd2JdBqVXHagoI3ps1_BxgXfZakGmg0; usertoken=5880124
+
+2020-01-12 08:46:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0> (referer: None)
+2020-01-12 08:46:57 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:46:58 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-12 08:46:58 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1495,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 8244,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 19.242162,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 12, 0, 46, 58, 457118),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 190369792,
+ 'memusage/startup': 190369792,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 12, 0, 46, 39, 214956)}
+2020-01-12 08:46:58 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-01-12 08:46:58 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:46:59 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:47:00 [scrapy.extensions.telnet] INFO: Telnet Password: da301c3501d381b3
+2020-01-12 08:47:00 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:47:00 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:47:01 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:47:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0> (referer: None)
+2020-01-12 08:47:01 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:47:01 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:47:01 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:47:02 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/pymysql/cursors.py:170: Warning: (1050, "Table 'hongbaos' already exists")
+  result = self._query(query)
+
+2020-01-12 08:47:02 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-12 08:47:02 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-12 08:47:02 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6030
+2020-01-12 08:47:02 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1495,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 8240,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 20.6034,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 12, 0, 47, 2, 660492),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 187682816,
+ 'memusage/startup': 187682816,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 12, 0, 46, 42, 57092)}
+2020-01-12 08:47:03 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-01-12 08:47:06 [scrapy.downloadermiddlewares.cookies] DEBUG: Sending cookies to: <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0>
+Cookie: ywkey=ywU2vsg9bL87; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680719; loginType=4; lgk=1; QDInfo=7RNRLX6Ck3KY5aWgMB84vrDdhMzPrkpyDrEIbrK0xJ397r2LvU5C5GT/C+ZfDcXIJ31Wvz7+FUbq8Zq3x19Zb1bGTyTu9PdALkTI9pqfeKww7aaaXneUlGJ6qlAIj9iapGapbBL177Hnp9HUAyvHVLMcO/NkgWkQ; cmfuToken=N((a0tJD3qrhLwUlsfEdzYe8BGppxeaTlihPKPLV5s7gABtAYNbjA3TI3c-3WZZLKJcPHEH4_PX120g9QhXRkQbnStZbjyt6XzqgpXTaL8qIQJLGPxEGjQna3QMz-Rb0BQIrDa-U4s1XaEFjFsWlrO_KlhZtaCX1l8trfyz4UHh4TlxYddDEYeLjxMXoMfHyrIzQhNU1hr0E2h6GFWffUyyQomTr7d3Sgm-FVUd2JdBqVXHagoI3ps1_BxgXfZakGmg0; usertoken=5880124
+
+2020-01-12 08:47:08 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:47:10 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:47:11 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:47:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://druid.if.qidian.com/Atom.axd/Api/HongBao/GetSquare?pn=1&pz=20&lastHongbaoId=0> (referer: None)
+2020-01-12 08:47:16 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: qdReader)
+2020-01-12 08:47:17 [scrapy.extensions.telnet] INFO: Telnet Password: c8dd6247c4fdc61e
+2020-01-12 08:47:18 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-12 08:47:19 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1495,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 8256,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 34.299208,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 12, 0, 47, 19, 66661),
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 182669312,
+ 'memusage/startup': 182669312,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 12, 0, 46, 44, 767453)}
+2020-01-12 08:47:19 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-01-12 08:47:28 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.4, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.7.3 (default, Oct  7 2019, 12:56:13) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.3, Platform Linux-5.0.0-38-generic-x86_64-with-Ubuntu-19.04-disco
+2020-01-12 08:47:32 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'qdReader', 'CONCURRENT_REQUESTS_PER_DOMAIN': 16, 'CONCURRENT_REQUESTS_PER_IP': 16, 'COOKIES_DEBUG': True, 'LOG_FILE': 'logs/scrapy_spider_1.log', 'NEWSPIDER_MODULE': 'qdReader.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SCHEDULER_PRIORITY_QUEUE': 'queuelib.PriorityQueue', 'SPIDER_MODULES': ['qdReader.spiders']}
+2020-01-12 08:47:31 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'qdReader.middlewares.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-12 08:47:32 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-12 08:47:32 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-12 08:48:13 [scrapy.extensions.telnet] INFO: Telnet Password: 2e429374b4afd869
+2020-01-12 08:48:15 [scrapy.middleware] INFO: Enabled item pipelines:
+['qdReader.pipelines.SquareHongbaoPipeline']
+2020-01-12 08:48:17 [scrapy.core.engine] INFO: Spider opened
+2020-01-12 08:48:19 [py.warnings] WARNING: /home/xjg/.local/lib/python3.7/site-packages/scrapy/core/scheduler.py:63: ScrapyDeprecationWarning: SCHEDULER_PRIORITY_QUEUE='queuelib.PriorityQueue' is no longer supported because of API changes; please use 'scrapy.pqueues.ScrapyPriorityQueue'
+  ScrapyDeprecationWarning)
+
+2020-01-12 08:48:22 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2020-01-12 08:48:23 [scrapy.core.engine] ERROR: Scraper close failure
+Traceback (most recent call last):
+  File "/home/xjg/.local/lib/python3.7/site-packages/pymysql/connections.py", line 583, in connect
+    **kwargs)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/crawler.py", line 88, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjg/.local/lib/python3.7/site-packages/twisted/internet/defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/xjg/work/QDreaderApp/qdReader/pipelines.py", line 59, in close_spider
+    self.conn.close()
+AttributeError: 'SquareHongbaoPipeline' object has no attribute 'conn'
+2020-01-12 08:48:24 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method CoreStats.spider_closed of <scrapy.extensions.corestats.CoreStats object at 0x7f41ffe0da90>>
+Traceback (most recent call last):
+  File "/home/xjg/.local/lib/python3.7/site-packages/pymysql/connections.py", line 583, in connect
+    **kwargs)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/crawler.py", line 88, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/xjg/.local/lib/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+    result = f(*args, **kw)
+  File "/home/xjg/.local/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/extensions/corestats.py", line 31, in spider_closed
+    elapsed_time = finish_time - self.start_time
+TypeError: unsupported operand type(s) for -: 'datetime.datetime' and 'NoneType'
+2020-01-12 08:48:25 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'log_count/ERROR': 2, 'log_count/INFO': 8, 'log_count/WARNING': 1}
+2020-01-12 08:48:25 [scrapy.core.engine] INFO: Spider closed (shutdown)
+2020-01-12 08:48:28 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']

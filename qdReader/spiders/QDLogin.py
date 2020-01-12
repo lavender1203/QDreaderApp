@@ -1,50 +1,88 @@
 # -*- coding: utf-8 -*-
 import ctypes
+import operator
 from jpype import *
 import os.path
+import math
+import urllib.parse
 import webbrowser
+import tempfile
+import time
+from functools import reduce
+from io import BytesIO
 # 图像处理标准库
 from PIL import Image
-#web测试
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-# 鼠标操作
-from selenium.webdriver.common.action_chains import ActionChains
-# 等待时间 产生随机数
-import time
-import random
-#from browsermobproxy import Server
-from selenium.webdriver import DesiredCapabilities
+from PIL import ImageChops
+
 import urllib
 import hashlib
-from .user import User
-from .device import Device
+#from .user import User
+#from .device import Device
+from .tcaptcha import tcaptcha
 
 libcrypto = ctypes.CDLL('libs/libcrypto.so.3')
 chaptasets = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
 
-user = User()
-device = Device
+#user = User()
+#device = Device
+
+#os_uuid = '359250052265715'
+#os_imei = os_uuid
+#os_qimei = '359250052265715'
+#os_android_version = '6.0'
+#os_device_type = 'Nexus 5'
+#os_version_1 = 'MRA58K'
+#os_dim = '1080'
+#devicename = 'Nexus 5'
+#devicetype = 'google_Nexus 5'
+#user_agent = 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.157 Mobile Safari/537.36 TCSDK/1.0.2'
+#sdkversion = '201'
+
+#一个手机号一天最多获取10次验证码
+#imei和qimei同时变化才认为不是同一设备
+os_uuid = '862679037204730'
+os_uuid = '862679037204733'
+os_uuid = '866174010680714'
+os_uuid = '866174010680719'
+os_imei = os_uuid
+os_qimei = '43757bd7111bb806'
+os_qimei = '866174010680714'
+os_qimei = '866174010680719'
+os_android_version = '7.0'
+os_android_version = '5.1.1'
+os_device_type = 'FRD-AL00'
+os_device_type = 'OPPO _OPPO R11'
+os_version_1 = '1794'
+os_dim = '1080'
+devicename = 'Honor 8'
+devicename = 'Nexus 6'
+devicetype = 'OPPO _OPPO R11'
+user_agent = 'Mozilla/5.0 (Linux; Android 7.0; FRD-AL00 Build/HUAWEIFRD-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Mobile Safari/537.36' + ' TCSDK/1.0.2'
+sdkversion = '121'
+sdkversion = '201'
+
+app_versioncode = '418'
+#app_versioncode = '380'
+app_versionname = '7.9.14'
+#app_versionname = '7.8.5'
 # username = user.name
 # password = user.password
-username = 'weimingshi90'
-password = 'wang14587'
-appid = '1600000770'
-width = '140'
-height = '140'
-map = ''
-captcha = {
-    'sig': "",
-    'code': ""
-}
+
+username = 'xuelong1012'
+#username = 'oneto160'
+password = '1212aaq'
+#username = user.name
+#password = user.password
 
 ywkey = ''
-ywguid = ''
-appId = ''
-areaId = ''
+ywguid = '800005880124'
+appId = '12'
+areaId = '30'
 lang = 'cn'
 bar = '72'
-source = '1000031'
+mode = 'normal'
+source = '1000017'
+sessionkey = ''
 QDInfo = ''
 QDSign = ''
 cmfuToken = ''
@@ -52,35 +90,37 @@ userInfo = ''
 
 lasthongbaoid = '0'
 pn = 1
+cookies_expire = 30 * 24 * 60 * 60
+cookie_path = 'cookies/' + username + '/'
 
 headers = {
         'referer': 'http://android.qidian.com',
         'Content-Type': 'application/x-www-form-urlencoded',
         'Host': 'ptlogin.qidian.com',
         'Accept-Encoding': 'gzip',
-        'User-Agent': 'okhttp/3.9.1'
+        'User-Agent': 'okhttp/3.12.6'
 }
 
 postData = {
         'password': password,
-        'devicename': 'Honor 8',
+        'devicename': devicename,
         'loginType': 23,
-        'source': '1000031',
+        'source': source,
         'signature': '',
         'appid': 12,
         'referer': 'http://android.qidian.com',
         'auto': 1,
         'ticket': 0,
-        'devicetype': 'Huawei_FRD-AL00',
-        'qimei': '43757bd7111bb806',
+        'devicetype': devicetype,
+        'qimei': os_qimei,
         'code': '',
         'format': 'json',
-        'osversion': 'Android7.0_7.8.5_380',
+        'osversion': 'Android' + os_android_version + '_'+ app_versionname + '_'+ app_versioncode,
         'username': username,
-        'imei': '862679037204730',
-        'sdkversion': 121,
+        'imei': os_uuid,
+        'sdkversion': sdkversion,
         'autotime': 30,
-        'version': 380,
+        'version': app_versioncode,
         'returnurl': 'http://www.qidian.com',
         'areaid': 30,
 }
@@ -102,7 +142,7 @@ def getPostParams(postdatas):
             c = ''
         ret += key + '=' + str(tmpdata[key]) + c
         index = index + 1
-    print(ret)
+    #print(ret)
     return ret
 
 def my_base64(input_data):
@@ -147,7 +187,7 @@ def genSignature(plain_text):
     return signature
 
 def getSignature():
-    plain_text = '862679037204730|43757bd7111bb806|' + str(int(time.time()))
+    plain_text = os_imei + '|' + os_qimei + '|' + str(int(time.time()))
     return genSignature(bytes(plain_text, encoding='utf-8'))
 
 def genQDSIGN(plain_text):
@@ -161,30 +201,33 @@ def genQDSIGN(plain_text):
     # tmps = ctypes.string_at(result, length)
     # tmps = b'G\xb4\xc2\xb3\xa4\xe8\xbbe\xe7\x15\xfd\xd9R\xa5\x8fPlw\x1c\xb18\xef\x95\xf4\x83\x19\xa46\xaa^\xf3R\xc7J7\xdf\xdf\x06\xb8\xd4TT$\xfe\xc7\xe6\xeft~A\x9cxG\x1e\xf37\xa2v\xe4z\xe7\xb0\x02*\x88\x97\x03\xa9\x94x3\x92\xef\x86\x84\xb5\x8aq\xdd\x86\xb2\xae\x9ey`B\xa8\x05$\xbb\xab\xd7\xe2-2)\x89\x18E\xd1\x8a\xa4\x06\xe6\x8e\xe2\x9b\x14G\x0e\xa2+\x9fO\xf9\x9f\xb0\xdf\xff\xf8'
 
-    print(type(tmps))
     signature = my_base64(tmps)
-    print(signature)
     return signature
 
-def getQDSIGN1(postdata="", usertoken='0'):
-    src = 'Rv1rPTnczce'
+def getAegisSign(postdata="", usertoken='0'):
+    #src = '0201359dcd3'
     timestamp = str(int(time.time() * 1000))
-    # timestamp = '1558780472479'
-    uuid = '862679037204730'
-    # uuid = '359250052265715'
-    version_name = '7.8.5'
+    #timestamp = '1578464052468'
+    #os_uuid = '359250052265715'
+    #postdata = 'appid=12&areaid=30&fromsource=1000017&isfirstregister=false&loginfrom=0&ywguid=800005880124&ywkey=ywzuMR7P4A0c'
+    version_name = app_versionname
     version_a = '0'
+    tmp = hashlib.md5((os_uuid + usertoken).encode(encoding='utf-8')).hexdigest() #前11位为src 后24位为key
+    src = tmp[:11]
+    key = tmp[8:]
     # postdata = 'appid=12&areaid=30&fromsource=1000031&isfirstregister=false&loginfrom=0&ywguid=800005880124&ywkey=yw4lY4emxuLV'
-    signatures = '308204a830820390a003020102020900936eacbe07f201df300d06092a864886f70d0101050500308194310b3009060355040613025553311330110603550408130a43616c69666f726e6961311630140603550407130d4d6f756e7461696e20566965773110300e060355040a1307416e64726f69643110300e060355040b1307416e64726f69643110300e06035504031307416e64726f69643122302006092a864886f70d0109011613616e64726f696440616e64726f69642e636f6d301e170d3038303232393031333334365a170d3335303731373031333334365a308194310b3009060355040613025553311330110603550408130a43616c69666f726e6961311630140603550407130d4d6f756e7461696e20566965773110300e060355040a1307416e64726f69643110300e060355040b1307416e64726f69643110300e06035504031307416e64726f69643122302006092a864886f70d0109011613616e64726f696440616e64726f69642e636f6d30820120300d06092a864886f70d01010105000382010d00308201080282010100d6931904dec60b24b1edc762e0d9d8253e3ecd6ceb1de2ff068ca8e8bca8cd6bd3786ea70aa76ce60ebb0f993559ffd93e77a943e7e83d4b64b8e4fea2d3e656f1e267a81bbfb230b578c20443be4c7218b846f5211586f038a14e89c2be387f8ebecf8fcac3da1ee330c9ea93d0a7c3dc4af350220d50080732e0809717ee6a053359e6a694ec2cb3f284a0a466c87a94d83b31093a67372e2f6412c06e6d42f15818dffe0381cc0cd444da6cddc3b82458194801b32564134fbfde98c9287748dbf5676a540d8154c8bbca07b9e247553311c46b9af76fdeeccc8e69e7c8a2d08e782620943f99727d3c04fe72991d99df9bae38a0b2177fa31d5b6afee91f020103a381fc3081f9301d0603551d0e04160414485900563d272c46ae118605a47419ac09ca8c113081c90603551d230481c13081be8014485900563d272c46ae118605a47419ac09ca8c11a1819aa48197308194310b3009060355040613025553311330110603550408130a43616c69666f726e6961311630140603550407130d4d6f756e7461696e20566965773110300e060355040a1307416e64726f69643110300e060355040b1307416e64726f69643110300e06035504031307416e64726f69643122302006092a864886f70d0109011613616e64726f696440616e64726f69642e636f6d820900936eacbe07f201df300c0603551d13040530030101ff300d06092a864886f70d010105050003820101007aaf968ceb50c441055118d0daabaf015b8a765a27a715a2c2b44f221415ffdace03095abfa42df70708726c2069e5c36eddae0400be29452c084bc27eb6a17eac9dbe182c204eb15311f455d824b656dbe4dc2240912d7586fe88951d01a8feb5ae5a4260535df83431052422468c36e22c2a5ef994d61dd7306ae4c9f6951ba3c12f1d1914ddc61f1a62da2df827f603fea5603b2c540dbd7c019c36bab29a4271c117df523cdbc5f3817a49e0efa60cbd7f74177e7a4f193d43f4220772666e4c4d83e1bd5a86087cf34f2dec21e245ca6c2bb016e683638050d2c430eea7c26a1c49d3760a58ab7f1a82cc938b4831384324bd0401fa12163a50570e684d'
-    plain_text = src + '|' + timestamp + '|' + usertoken + '|' + uuid + '|' + '1' + '|' + version_name + '|' + version_a + '|' \
-                 + hashlib.md5(postdata.encode(encoding='utf-8')).hexdigest() + '|' + hashlib.md5(signatures.encode(encoding='utf-8')).hexdigest()
-    print(plain_text)
-    print(len(plain_text))
+    #signatures = '308204a830820390a003020102020900936eacbe07f201df300d06092a864886f70d0101050500308194310b3009060355040613025553311330110603550408130a43616c69666f726e6961311630140603550407130d4d6f756e7461696e20566965773110300e060355040a1307416e64726f69643110300e060355040b1307416e64726f69643110300e06035504031307416e64726f69643122302006092a864886f70d0109011613616e64726f696440616e64726f69642e636f6d301e170d3038303232393031333334365a170d3335303731373031333334365a308194310b3009060355040613025553311330110603550408130a43616c69666f726e6961311630140603550407130d4d6f756e7461696e20566965773110300e060355040a1307416e64726f69643110300e060355040b1307416e64726f69643110300e06035504031307416e64726f69643122302006092a864886f70d0109011613616e64726f696440616e64726f69642e636f6d30820120300d06092a864886f70d01010105000382010d00308201080282010100d6931904dec60b24b1edc762e0d9d8253e3ecd6ceb1de2ff068ca8e8bca8cd6bd3786ea70aa76ce60ebb0f993559ffd93e77a943e7e83d4b64b8e4fea2d3e656f1e267a81bbfb230b578c20443be4c7218b846f5211586f038a14e89c2be387f8ebecf8fcac3da1ee330c9ea93d0a7c3dc4af350220d50080732e0809717ee6a053359e6a694ec2cb3f284a0a466c87a94d83b31093a67372e2f6412c06e6d42f15818dffe0381cc0cd444da6cddc3b82458194801b32564134fbfde98c9287748dbf5676a540d8154c8bbca07b9e247553311c46b9af76fdeeccc8e69e7c8a2d08e782620943f99727d3c04fe72991d99df9bae38a0b2177fa31d5b6afee91f020103a381fc3081f9301d0603551d0e04160414485900563d272c46ae118605a47419ac09ca8c113081c90603551d230481c13081be8014485900563d272c46ae118605a47419ac09ca8c11a1819aa48197308194310b3009060355040613025553311330110603550408130a43616c69666f726e6961311630140603550407130d4d6f756e7461696e20566965773110300e060355040a1307416e64726f69643110300e060355040b1307416e64726f69643110300e06035504031307416e64726f69643122302006092a864886f70d0109011613616e64726f696440616e64726f69642e636f6d820900936eacbe07f201df300c0603551d13040530030101ff300d06092a864886f70d010105050003820101007aaf968ceb50c441055118d0daabaf015b8a765a27a715a2c2b44f221415ffdace03095abfa42df70708726c2069e5c36eddae0400be29452c084bc27eb6a17eac9dbe182c204eb15311f455d824b656dbe4dc2240912d7586fe88951d01a8feb5ae5a4260535df83431052422468c36e22c2a5ef994d61dd7306ae4c9f6951ba3c12f1d1914ddc61f1a62da2df827f603fea5603b2c540dbd7c019c36bab29a4271c117df523cdbc5f3817a49e0efa60cbd7f74177e7a4f193d43f4220772666e4c4d83e1bd5a86087cf34f2dec21e245ca6c2bb016e683638050d2c430eea7c26a1c49d3760a58ab7f1a82cc938b4831384324bd0401fa12163a50570e684d'
+    postdataMD5 = hashlib.md5(postdata.encode(encoding='utf-8')).hexdigest()
+    rPostdataMD5 = ''.join(reversed(list(postdataMD5)))
+    rHalfPostdataMD5 = ''.join(list(rPostdataMD5)[::2])
+    data = rHalfPostdataMD5 + usertoken + version_name
+    plain_text = src + '|' + timestamp + '|' + usertoken + '|' + os_uuid + '|' + '1' + '|' + version_name + '|' + version_a + '|' \
+                 + hashlib.md5(data.encode(encoding='utf-8')).hexdigest() + '|' + rPostdataMD5
     plain_text = plain_text.encode('utf-8')
 
     from Crypto.Cipher import DES3
 
-    key = b'\x7B\x31\x64\x59\x67\x71\x45\x29\x68\x39\x2C\x52\x29\x68\x4B\x71\x45\x63\x76\x34\x5D\x6B\x5B\x68'
+    #key = b'\x63\x64\x33\x63\x64\x37\x34\x31\x35\x35\x36\x31\x63\x33\x62\x61\x62\x38\x37\x35\x37\x34\x30\x60'
     iv = b'\x30\x31\x32\x33\x34\x35\x36\x37'
     cipher = DES3.new(key, DES3.MODE_CBC, iv)
 
@@ -195,39 +238,114 @@ def getQDSIGN1(postdata="", usertoken='0'):
         length = lx + padding
         if padding == 1:
             plain_text = plain_text.decode('utf-8') + b'\x01'.decode('utf-8')
+            plain_text = plain_text.encode('utf-8')
         elif padding == 2:
             plain_text = plain_text.decode('utf-8') + b'\x02\x02'.decode('utf-8')
+            plain_text = plain_text.encode('utf-8')
         elif padding == 3:
             plain_text = plain_text.decode('utf-8') + b'\x03\x03\x03'.decode('utf-8')
+            plain_text = plain_text.encode('utf-8')
         elif padding == 4:
             plain_text = plain_text.decode('utf-8') + b'\x04\x04\x04\x04'.decode('utf-8')
+            plain_text = plain_text.encode('utf-8')
         elif padding == 5:
             plain_text = plain_text.decode('utf-8') + b'\x05\x05\x05\x05\x05'.decode('utf-8')
+            plain_text = plain_text.encode('utf-8')
         elif padding == 6:
             plain_text = plain_text.decode('utf-8') + b'\x06\x06\x06\x06\x06\x06'.decode('utf-8')
+            plain_text = plain_text.encode('utf-8')
         elif padding == 7:
             plain_text = plain_text.decode('utf-8') + b'\x07\x07\x07\x07\x07\x07\x07'.decode('utf-8')
+            plain_text = plain_text.encode('utf-8')
     else:
         length = lx
-    msg = cipher.encrypt(plain_text.encode('utf-8'))
+    #msg = cipher.encrypt(plain_text.encode('utf-8'))
+    msg = cipher.encrypt(plain_text)
     signature = my_base64(msg)
-    print(signature)
+    filename = '/tmp/in.txt'
+    fin = open(filename, 'w', encoding='utf-8')
+    fin.write(plain_text.decode('utf-8'))
+    fin.close()
+    import subprocess
+    out = subprocess.check_output(["openssl", "des-ede3-cbc", "-in",filename,"-K", bytes(key, encoding='utf-8').hex(), "-iv", iv.hex()])
+
+    #out = os.system("openssl des-ede3-cbc -in in.txt  -K '7B3164596771452968392C5229684B71456376345D6B5B68' -iv '3031323334353637'
+    signature = my_base64(out)
+    return signature
+
+def getQDSIGN1(postdata="", usertoken='0'):
+    src = 'Rv1rPTnczce'
+    timestamp = str(int(time.time() * 1000))
+    #timestamp = '1578464052466'
+    #postdata = 'appid=12&areaid=30&fromsource=1000017&isfirstregister=false&loginfrom=0&ywguid=800005880124&ywkey=ywzuMR7P4A0c'
+    #os_uuid = '359250052265715'
+    version_name = app_versionname
+    version_a = '0'
+    # postdata = 'appid=12&areaid=30&fromsource=1000031&isfirstregister=false&loginfrom=0&ywguid=800005880124&ywkey=yw4lY4emxuLV'
+    signatures = '308204a830820390a003020102020900936eacbe07f201df300d06092a864886f70d0101050500308194310b3009060355040613025553311330110603550408130a43616c69666f726e6961311630140603550407130d4d6f756e7461696e20566965773110300e060355040a1307416e64726f69643110300e060355040b1307416e64726f69643110300e06035504031307416e64726f69643122302006092a864886f70d0109011613616e64726f696440616e64726f69642e636f6d301e170d3038303232393031333334365a170d3335303731373031333334365a308194310b3009060355040613025553311330110603550408130a43616c69666f726e6961311630140603550407130d4d6f756e7461696e20566965773110300e060355040a1307416e64726f69643110300e060355040b1307416e64726f69643110300e06035504031307416e64726f69643122302006092a864886f70d0109011613616e64726f696440616e64726f69642e636f6d30820120300d06092a864886f70d01010105000382010d00308201080282010100d6931904dec60b24b1edc762e0d9d8253e3ecd6ceb1de2ff068ca8e8bca8cd6bd3786ea70aa76ce60ebb0f993559ffd93e77a943e7e83d4b64b8e4fea2d3e656f1e267a81bbfb230b578c20443be4c7218b846f5211586f038a14e89c2be387f8ebecf8fcac3da1ee330c9ea93d0a7c3dc4af350220d50080732e0809717ee6a053359e6a694ec2cb3f284a0a466c87a94d83b31093a67372e2f6412c06e6d42f15818dffe0381cc0cd444da6cddc3b82458194801b32564134fbfde98c9287748dbf5676a540d8154c8bbca07b9e247553311c46b9af76fdeeccc8e69e7c8a2d08e782620943f99727d3c04fe72991d99df9bae38a0b2177fa31d5b6afee91f020103a381fc3081f9301d0603551d0e04160414485900563d272c46ae118605a47419ac09ca8c113081c90603551d230481c13081be8014485900563d272c46ae118605a47419ac09ca8c11a1819aa48197308194310b3009060355040613025553311330110603550408130a43616c69666f726e6961311630140603550407130d4d6f756e7461696e20566965773110300e060355040a1307416e64726f69643110300e060355040b1307416e64726f69643110300e06035504031307416e64726f69643122302006092a864886f70d0109011613616e64726f696440616e64726f69642e636f6d820900936eacbe07f201df300c0603551d13040530030101ff300d06092a864886f70d010105050003820101007aaf968ceb50c441055118d0daabaf015b8a765a27a715a2c2b44f221415ffdace03095abfa42df70708726c2069e5c36eddae0400be29452c084bc27eb6a17eac9dbe182c204eb15311f455d824b656dbe4dc2240912d7586fe88951d01a8feb5ae5a4260535df83431052422468c36e22c2a5ef994d61dd7306ae4c9f6951ba3c12f1d1914ddc61f1a62da2df827f603fea5603b2c540dbd7c019c36bab29a4271c117df523cdbc5f3817a49e0efa60cbd7f74177e7a4f193d43f4220772666e4c4d83e1bd5a86087cf34f2dec21e245ca6c2bb016e683638050d2c430eea7c26a1c49d3760a58ab7f1a82cc938b4831384324bd0401fa12163a50570e684d'
+    signatures = '308202253082018ea00302010202044e239460300d06092a864886f70d0101050500305731173015060355040a0c0ec386c3b0c2b5c3a3c396c390c38e311d301b060355040b0c14c386c3b0c2b5c3a3c396c390c38ec384c38dc3b8311d301b06035504030c14c386c3b0c2b5c3a3c396c390c38ec384c38dc3b8301e170d3131303731383032303331325a170d3431303731303032303331325a305731173015060355040a0c0ec386c3b0c2b5c3a3c396c390c38e311d301b060355040b0c14c386c3b0c2b5c3a3c396c390c38ec384c38dc3b8311d301b06035504030c14c386c3b0c2b5c3a3c396c390c38ec384c38dc3b830819f300d06092a864886f70d010101050003818d0030818902818100a3d47f8bfd8d54de1dfbc40a9caa88a43845e287e8f40da2056be126b17233669806bfa60799b3d1364e79a78f355fd4f72278650b377e5acc317ff4b2b3821351bcc735543dab0796c716f769c3a28fedc3bca7780e5fff6c87779f3f3cdec6e888b4d21de27df9e7c21fc8a8d9164bfafac6df7d843e59b88ec740fc52a3c50203010001300d06092a864886f70d0101050500038181001f7946581b8812961a383b2d860b89c3f79002d46feb96f2a505bdae57097a070f3533c42fc3e329846886281a2fbd5c87685f59ab6dd71cc98af24256d2fbf980ded749e2c35eb0151ffde993193eace0b4681be4bcee5f663dd71dd06ab64958e02a60d6a69f21290cb496dd8784a4c31ebadb1b3cc5cb0feebdaa2f686ee2'
+    plain_text = src + '|' + timestamp + '|' + usertoken + '|' + os_uuid + '|' + '1' + '|' + version_name + '|' + version_a + '|' \
+                 + hashlib.md5(postdata.encode(encoding='utf-8')).hexdigest() + '|' + hashlib.md5(signatures.encode(encoding='utf-8')).hexdigest()
+    plain_text = plain_text.encode('utf-8')
+
+    from Crypto.Cipher import DES3
+
+    key = b'\x7B\x31\x64\x59\x67\x71\x45\x29\x68\x39\x2C\x52\x29\x68\x4B\x71\x45\x63\x76\x34\x5D\x6B\x5B\x68'
+    iv = b'\x30\x31\x32\x33\x34\x35\x36\x37'
+    cipher = DES3.new(key, DES3.MODE_CBC, iv)
+
+    #plain_text = b'Rv1rPTnczce|1578464052466|0|359250052265715|1|7.9.14|0|9f813dae5163c4f2390f2bd3a38e5102|f189adc92b816b3e9da29ea304d4a7e4'
+    # plaintext = b'Rv1rPTnczce|1558780472479|5880124|359250052265715|1|7.8.5|0|8afc1ba869e104d10f535458832d4023|e967c9e5fd92879f6bac96358de84d90'
+    lx = len(plain_text)
+    padding = 8 - lx % 8
+    if padding != 0:
+        length = lx + padding
+        if padding == 1:
+            plain_text = plain_text.decode('utf-8') + b'\x01'.decode('utf-8')
+            plain_text = plain_text.encode('utf-8')
+        elif padding == 2:
+            plain_text = plain_text.decode('utf-8') + b'\x02\x02'.decode('utf-8')
+            plain_text = plain_text.encode('utf-8')
+        elif padding == 3:
+            plain_text = plain_text.decode('utf-8') + b'\x03\x03\x03'.decode('utf-8')
+            plain_text = plain_text.encode('utf-8')
+        elif padding == 4:
+            plain_text = plain_text.decode('utf-8') + b'\x04\x04\x04\x04'.decode('utf-8')
+            plain_text = plain_text.encode('utf-8')
+        elif padding == 5:
+            plain_text = plain_text.decode('utf-8') + b'\x05\x05\x05\x05\x05'.decode('utf-8')
+            plain_text = plain_text.encode('utf-8')
+        elif padding == 6:
+            plain_text = plain_text.decode('utf-8') + b'\x06\x06\x06\x06\x06\x06'.decode('utf-8')
+            plain_text = plain_text.encode('utf-8')
+        elif padding == 7:
+            plain_text = plain_text.decode('utf-8') + b'\x07\x07\x07\x07\x07\x07\x07'.decode('utf-8')
+            plain_text = plain_text.encode('utf-8')
+    else:
+        length = lx
+    filename = '/tmp/in.txt'
+    fin = open(filename, 'w', encoding='utf-8')
+    fin.write(plain_text.decode('utf-8'))
+    fin.close()
+    import subprocess
+    out = subprocess.check_output(["openssl", "des-ede3-cbc", "-in",filename,"-K", '7B3164596771452968392C5229684B71456376345D6B5B68', "-iv", '3031323334353637'])
+
+    #out = os.system("openssl des-ede3-cbc -in in.txt  -K '7B3164596771452968392C5229684B71456376345D6B5B68' -iv '3031323334353637'")
+    signature = my_base64(out)
     return signature
 
 def getQDSIGN(postdata="", usertoken='0'):
     src = 'Rv1rPTnczce'
     timestamp = str(int(time.time() * 1000))
     # timestamp = '1558780472479'
-    uuid = '862679037204730'
+    uuid = os_uuid
     # uuid = '359250052265715'
-    version_name = '7.8.5'
+    version_name = app_versionname
     version_a = '0'
     # postdata = 'appid=12&areaid=30&fromsource=1000031&isfirstregister=false&loginfrom=0&ywguid=800005880124&ywkey=yw4lY4emxuLV'
     signatures = '308204a830820390a003020102020900936eacbe07f201df300d06092a864886f70d0101050500308194310b3009060355040613025553311330110603550408130a43616c69666f726e6961311630140603550407130d4d6f756e7461696e20566965773110300e060355040a1307416e64726f69643110300e060355040b1307416e64726f69643110300e06035504031307416e64726f69643122302006092a864886f70d0109011613616e64726f696440616e64726f69642e636f6d301e170d3038303232393031333334365a170d3335303731373031333334365a308194310b3009060355040613025553311330110603550408130a43616c69666f726e6961311630140603550407130d4d6f756e7461696e20566965773110300e060355040a1307416e64726f69643110300e060355040b1307416e64726f69643110300e06035504031307416e64726f69643122302006092a864886f70d0109011613616e64726f696440616e64726f69642e636f6d30820120300d06092a864886f70d01010105000382010d00308201080282010100d6931904dec60b24b1edc762e0d9d8253e3ecd6ceb1de2ff068ca8e8bca8cd6bd3786ea70aa76ce60ebb0f993559ffd93e77a943e7e83d4b64b8e4fea2d3e656f1e267a81bbfb230b578c20443be4c7218b846f5211586f038a14e89c2be387f8ebecf8fcac3da1ee330c9ea93d0a7c3dc4af350220d50080732e0809717ee6a053359e6a694ec2cb3f284a0a466c87a94d83b31093a67372e2f6412c06e6d42f15818dffe0381cc0cd444da6cddc3b82458194801b32564134fbfde98c9287748dbf5676a540d8154c8bbca07b9e247553311c46b9af76fdeeccc8e69e7c8a2d08e782620943f99727d3c04fe72991d99df9bae38a0b2177fa31d5b6afee91f020103a381fc3081f9301d0603551d0e04160414485900563d272c46ae118605a47419ac09ca8c113081c90603551d230481c13081be8014485900563d272c46ae118605a47419ac09ca8c11a1819aa48197308194310b3009060355040613025553311330110603550408130a43616c69666f726e6961311630140603550407130d4d6f756e7461696e20566965773110300e060355040a1307416e64726f69643110300e060355040b1307416e64726f69643110300e06035504031307416e64726f69643122302006092a864886f70d0109011613616e64726f696440616e64726f69642e636f6d820900936eacbe07f201df300c0603551d13040530030101ff300d06092a864886f70d010105050003820101007aaf968ceb50c441055118d0daabaf015b8a765a27a715a2c2b44f221415ffdace03095abfa42df70708726c2069e5c36eddae0400be29452c084bc27eb6a17eac9dbe182c204eb15311f455d824b656dbe4dc2240912d7586fe88951d01a8feb5ae5a4260535df83431052422468c36e22c2a5ef994d61dd7306ae4c9f6951ba3c12f1d1914ddc61f1a62da2df827f603fea5603b2c540dbd7c019c36bab29a4271c117df523cdbc5f3817a49e0efa60cbd7f74177e7a4f193d43f4220772666e4c4d83e1bd5a86087cf34f2dec21e245ca6c2bb016e683638050d2c430eea7c26a1c49d3760a58ab7f1a82cc938b4831384324bd0401fa12163a50570e684d'
     plain_text = src + '|' + timestamp + '|' + usertoken + '|' + uuid + '|' + '1' + '|' + version_name + '|' + version_a + '|' \
                  + hashlib.md5(postdata.encode(encoding='utf-8')).hexdigest() + '|' + hashlib.md5(signatures.encode(encoding='utf-8')).hexdigest()
-    print(plain_text)
-    print(len(plain_text))
     plain_text = plain_text.encode(encoding='utf-8')
     return genQDSIGN(plain_text)
 
@@ -258,16 +376,8 @@ def getQDInfo(app_usertoken='0'):
              "-Djava.class.path=%s" % (jarpath + 'testDes3Cbc.jar'))
 
     JDClass = JClass("QDInfo")
-    os_uuid = '862679037204730'
-    app_versionname = '7.8.5'
-    os_android_version = '7.0'
-    os_device_type = 'FRD-AL00'
-    app_versioncode = '380'
-    os_version_1 = '1794'
-    os_dim = '1080'
     timestamp = str(int(time.time() * 1000))
-    source = '1000031'
-    os_qimei = '43757bd7111bb806'
+    #source = '1000031'
     data = os_uuid + '|' + app_versionname + '|' + os_dim + '|' + os_version_1 + '|' + source + '|' \
            + os_android_version + '|' + '1' + '|' + os_device_type + '|' + app_versioncode + '|' + source + '|' + '4' \
            + '|' + app_usertoken + '|' + timestamp + '|' + '1' + '|' + os_qimei
@@ -276,136 +386,8 @@ def getQDInfo(app_usertoken='0'):
     QDInfo = JDClass.getQDInfo(data, key)
     return QDInfo
 
-# 20分钟内只能连续3次
-def tcaptcha():
-    libpath = os.path.dirname(os.path.abspath(__file__)) + '/../..' + "/libs/"
-    url = 'file://' + libpath + 'tcaptcha_webview.html' + '?appid=' + appid + '&width=' + width + '&height=' + height + '&map=' + map
-    user_agent = 'Mozilla/5.0 (Linux; Android 7.0; FRD-AL00 Build/HUAWEIFRD-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Mobile Safari/537.36' + ' TCSDK/1.0.2'
+def captcha():
+	return tcaptcha()
 
-    QDInfo = getQDInfo()
-    # server = Server("/opt/project/qdReader/libs/browsermob-proxy-2.1.4/bin/browsermob-proxy")
-    # server.start()
-    # proxy = server.create_proxy()
-    options = Options()
-    options.add_argument('--headless')
-    # options.add_argument("--proxy-server={0}".format(proxy.proxy))
-    options.add_argument('--no-sandbox')
-    options.add_argument("--touch-events")
-    # options.add_argument('auto-open-devtools-for-tabs')
-    options.add_argument('X-Requested-With="com.qidian.QDReader"')
-    mobile_emulation = {"deviceMetrics": {"width": 1080, "height": 1920, "pixelRatio": 3.0}, "userAgent": user_agent}
-    options.add_experimental_option("mobileEmulation", mobile_emulation)
-    options.add_experimental_option('prefs', {'profile.default_content_settings.popups': 0,'intl.accept_languages': 'zh-CN,en-US;q=0.8'})
-    driver = webdriver.Chrome(executable_path="/usr/bin/chromedriver", chrome_options=options)
-    # tag the har(network logs) with a name
-    # proxy.new_har("tcaptcha", options={'captureHeaders': True})
-    # proxy.headers(headers={'Via': '', 'X-Requested-With': 'com.qidian.QDReader'})
-    driver.get("http://ssl.captcha.qq.com:443")
-    time.sleep(3)
-    # print(driver.get_cookies())
-    driver.add_cookie({'name': 'ywkey', 'value': ''})
-    driver.add_cookie({'name': 'ywguid', 'value': ''})
-    driver.add_cookie({'name': 'QDInfo', 'value': QDInfo})
 
-    driver.get(url)
-    time.sleep(3)
-    # print(driver.get_cookies())
-    captcha['sig'] = driver.execute_script('return localStorage.getItem("ticket")')
-    captcha['code'] = driver.execute_script('return localStorage.getItem("randstr")')
-    # result = proxy.har
-    # print(result)  # returns a Network logs (HAR) as JSON
-    # for entry in result['log']['entries']:
-        # if entry['request']['url'].find("cap_union_prehandle") > 0:
-        # print(entry)
-
-    # driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
-    # el = driver.find_element_by_id('TencentCaptcha')
-    # el.click()
-    # time.sleep(3)
-    # captcha['sig'] = driver.execute_script('return localStorage.getItem("sig")')
-    # captcha['code'] = driver.execute_script('return localStorage.getItem("code")')
-
-    # print(captcha)
-    # 因为QQ登录是在一个框架中又有一个框架
-    # 所以需要先进框架, 再定位节点元素
-    # 进入框架有两种方法
-    # 1. 通过框架id进入
-    while captcha['sig'] == "" or captcha['code'] == "" or captcha['sig'] == None or captcha['code'] == None:
-        time.sleep(10)
-        # 2. 通过节点定位   如果登录成功就不需要往下。。。
-        now_window = driver.window_handles
-        print(now_window)
-        el_frame = driver.find_element_by_xpath('//*[@id="tcaptcha_iframe"]')
-        driver.switch_to.frame(el_frame)
-
-        # 获取拖拽的圆球
-        slide_block = driver.find_element_by_id('tcaptcha_drag_thumb')
-
-        # 生成拖拽移动轨迹，加3是为了模拟滑过缺口位置后返回缺口的情况
-        loc = 210
-        track_list = get_track(loc + 1)
-        time.sleep(1)
-        ActionChains(driver).click_and_hold(slide_block).perform()
-        time.sleep(0.2)
-        # 根据轨迹拖拽圆球
-        for track in track_list:
-            ActionChains(driver).move_by_offset(xoffset=track, yoffset=0).perform()
-        # 模拟人工滑动超过缺口位置返回至缺口的情况，数据来源于人工滑动轨迹，同时还加入了随机数，都是为了更贴近人工滑动轨迹
-        imitate = ActionChains(driver).move_by_offset(xoffset=-1, yoffset=0)
-        time.sleep(0.015)
-        imitate.perform()
-        time.sleep(random.randint(6, 10) / 10)
-        imitate.perform()
-        time.sleep(0.04)
-        imitate.perform()
-        time.sleep(0.012)
-        imitate.perform()
-        time.sleep(0.019)
-        imitate.perform()
-        time.sleep(0.033)
-        ActionChains(driver).move_by_offset(xoffset=1, yoffset=0).perform()
-        # 放开圆球
-        ActionChains(driver).pause(random.randint(6, 14) / 10).release(slide_block).perform()
-        time.sleep(5)
-        captcha['sig'] = driver.execute_script('return localStorage.getItem("sig")')
-        captcha['code'] = driver.execute_script('return localStorage.getItem("code")')
-    # 务必记得加入quit()或close()结束进程，不断测试电脑只会卡卡西
-    # server.stop()
-    driver.close()
-    return captcha
-
-# 滑块移动轨迹
-def get_track(distance):
-    track = []
-    current = 0
-    mid = distance*3/4
-    t = random.randint(2, 3)/10
-    v = 0
-    while current < distance:
-        if current < mid:
-            a = 25
-        else:
-            a = -3
-        v0 = v
-        v = v0+a*t
-        move = v0*t+1/2*a*t*t
-        current += move
-        track.append(round(move))
-    return track
-
-def match_source(image):
-    imagea = Image.open('img/source1.png')
-    imageb = Image.open('img/source2.png')
-    imagec = Image.open('img/source3.png')
-    imaged = Image.open('img/source4.png')
-    list = [imagea, imageb, imagec, imaged]
-    # 通过像素差遍历匹配本地原图
-    for i in list:
-        # 本人电脑原图与缺口图对应滑块图片横坐标相同，纵坐标原图比缺口图大88px，可根据实际情况修改
-        pixel1 = image.getpixel((868, 340))
-        pixel2 = i.getpixel((868, 428))
-        # pixel[0]代表R值，pixel[1]代表G值，pixel[2]代表B值
-        if abs(pixel1[0] - pixel2[0]) < 5:
-            return i
-    return image
 

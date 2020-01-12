@@ -1,0 +1,69 @@
+2020-01-12 15:58:24 [scrapy.core.scraper] ERROR: Spider error processing <POST http://druid.if.qidian.com/Atom.axd/Api/HongBao/UseHongBao> (referer: http://druid.if.qidian.com/Atom.axd/Api/HongBao/Get)
+Traceback (most recent call last):
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/core/spidermw.py", line 84, in evaluate_iterable
+    for r in iterable:
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/core/spidermw.py", line 84, in evaluate_iterable
+    for r in iterable:
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/core/spidermw.py", line 84, in evaluate_iterable
+    for r in iterable:
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/core/spidermw.py", line 84, in evaluate_iterable
+    for r in iterable:
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/xjg/work/QDreaderApp/qdReader/spiders/getHongbao.py", line 143, in parse
+    sql = "update hongbaos set Status='%d' where hongbaoId='%d' and Status!='%d'" % (newStatus, postData['hongBaoId'], newStatus)
+UnboundLocalError: local variable 'postData' referenced before assignment
+2020-01-12 15:58:24 [scrapy.core.scraper] ERROR: Spider error processing <POST http://druid.if.qidian.com/Atom.axd/Api/HongBao/UseHongBao> (referer: http://druid.if.qidian.com/Atom.axd/Api/HongBao/Get)
+Traceback (most recent call last):
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/core/spidermw.py", line 84, in evaluate_iterable
+    for r in iterable:
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/core/spidermw.py", line 84, in evaluate_iterable
+    for r in iterable:
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/core/spidermw.py", line 84, in evaluate_iterable
+    for r in iterable:
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/core/spidermw.py", line 84, in evaluate_iterable
+    for r in iterable:
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/xjg/work/QDreaderApp/qdReader/spiders/getHongbao.py", line 143, in parse
+    sql = "update hongbaos set Status='%d' where hongbaoId='%d' and Status!='%d'" % (newStatus, postData['hongBaoId'], newStatus)
+UnboundLocalError: local variable 'postData' referenced before assignment
+2020-01-12 15:58:24 [scrapy.core.scraper] ERROR: Spider error processing <POST http://druid.if.qidian.com/Atom.axd/Api/HongBao/UseHongBao> (referer: http://druid.if.qidian.com/Atom.axd/Api/HongBao/Get)
+Traceback (most recent call last):
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/core/spidermw.py", line 84, in evaluate_iterable
+    for r in iterable:
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/core/spidermw.py", line 84, in evaluate_iterable
+    for r in iterable:
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/core/spidermw.py", line 84, in evaluate_iterable
+    for r in iterable:
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/core/spidermw.py", line 84, in evaluate_iterable
+    for r in iterable:
+  File "/home/xjg/.local/lib/python3.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/xjg/work/QDreaderApp/qdReader/spiders/getHongbao.py", line 143, in parse
+    sql = "update hongbaos set Status='%d' where hongbaoId='%d' and Status!='%d'" % (newStatus, postData['hongBaoId'], newStatus)
+UnboundLocalError: local variable 'postData' referenced before assignment

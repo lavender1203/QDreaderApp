@@ -12,3 +12,11 @@ class QdreaderItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass
+
+class SquareHongbaoItem(scrapy.Item):
+    hongbaoId = scrapy.Field()
+    Status = scrapy.Field()
+    BookName = scrapy.Field()
+    BookId = scrapy.Field()
+    Signature = scrapy.Field()
+    Type = scrapy.Field()

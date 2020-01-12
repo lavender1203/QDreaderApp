@@ -1,0 +1,11 @@
+User-Agent: Mozilla/mobile QDReaderAndroid/7.9.14/418/1000017/866174010680714
+Qdinfo: 7RNRLX6Ck3INlAR7Vej4HF5QveDy+2N8KwiIxYa6QcCDTWHYI4so5+rL8Bg8wlB4rhvrT4l9GThL+Y7DLHmKa3k3tapLRSw4SebAQ1Dhs03dR/R3lEQCNOdR1wQHk1ltVfFOUfbnVI3oV+zzeYqnzA==
+Aegissign: 6zj0jix31QCKP/6Fz3wf62NudnzsYs1+m6naz8ElPrkxdxiDdwduZHD1PQnS CNVtFLYSwYKwGODK+LfTryX6ik67k6bnbLA+OvM1QMjR4Y2zYVzox6bO/W2B ArprboVFuLR3Srpo0dJzP7Tr2FBVBrdg2qObgtF8E4Y46mtdbsc=
+Qdsign: R7TCs6Tou2Xyw+JVH1pywkXzsjPD2yvAbT+8vItSQWUR2RmkBXfnrsrAHk+T 07RGa7t8WNmRBhstIRIIyP9XlnbIyXYgxMFwqaOYSh9apYZbHuOotxGPHNaB D0Kitd9h4kSAzRzZNRIF5RTENOFgkSrjRSZU76PiHa99wFQ8hMc=
+Content-Type: application/x-www-form-urlencoded
+Host: druid.if.qidian.com
+Accept-Encoding: gzip
+Referer: https://ptlogin.qidian.com/sdk/staticlogin
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en
+Cookie: ywkey=ywq54Q2sXJjY; ywguid=800005880124; appId=12; areaId=30; lang=cn; mode=normal; bar=72; qimei=866174010680714; loginType=4; cmfuToken=N((OuX3r4ua3P7cc2rcLlrtu3GU0ezn6TRLt-uoTh533iU_E5urS9OB_cjhmDwFs8DSIFC61rhUdBWPiSan9Kp43NOoRbc0tZCQ39LGop00xy5CeUQmRBpAcrdF3l2YbNrddbEo14JAfJwzMzgi34qaQ1Pmz6CQO3cRUdJwYRgxvl2KX3tqczASc1HBwxY29sicBpT45ep3_6MTEhpKdBmZz5VtAAbGL95oZSNyGOrZIAc4EWPX4gldeiK1WCgZLk5t0; QDInfo=7RNRLX6Ck3INlAR7Vej4HF5QveDy+2N8KwiIxYa6QcCDTWHYI4so5+rL8Bg8wlB4rhvrT4l9GThL+Y7DLHmKa3k3tapLRSw4SebAQ1Dhs03dR/R3lEQCNH3BnfFAvfcUYRJOE2R2IF49N0MfatKZCQ==; ywkey=ywl43la6GJef; ywguid=800005880124; ywopenid=A9A3FC292510C285557FDAFD97EAAAF5

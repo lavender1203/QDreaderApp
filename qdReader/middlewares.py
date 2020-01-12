@@ -104,17 +104,20 @@ class QdreaderDownloaderMiddleware(object):
 
 class ProxyMiddleware(object):
     def process_request(self, request, spider):
-        # request.meta['proxy'] = 'http://127.0.0.1:8888'
+        #request.meta['proxy'] = '183.146.213.157:80'
+        #request.meta['proxy'] = 'http://127.0.0.1:8888'
         # request.meta['proxy'] = 'http://127.0.0.1:8118' # 设置代理
-        # proxy = self.get_proxy() # 从代理池随机获取一个代理
-        # if proxy != None:
-        #     request.meta['proxy'] = 'http://' + str(proxy, 'utf-8') # 设置代理
-        # else:
-        #     pass
+        #proxy = self.get_proxy()['proxy'] # 从代理池随机获取一个代理
+        #print(proxy)
+        #if proxy != None:
+        #    request.meta['proxy'] = proxy # 设置代理
+        #else:
+        #    pass
         pass
 
     def get_proxy(self):
-        return requests.get("http://127.0.0.1:5010/get/").content
+        return requests.get("http://127.0.0.1:5010/get/").json()
 
     def delete_proxy(self, proxy):
         requests.get("http://127.0.0.1:5010/delete/?proxy={}".format(proxy))
+

@@ -23,7 +23,7 @@ class User:
                 'password': '1212aaq'
             },
             {
-                'name': 'onto160',
+                'name': 'oneto160',
                 'password': '1212aaq'
             },
             {
@@ -56,6 +56,94 @@ class User:
             },
             {
                 'name': 'zj1382',
+                'password': '1212aaq'
+            },
+            {
+                'name': 'yyn861005',
+                'password': '1212aaq'
+            },
+            {
+                'name': 'qq376050902',
+                'password': '1212aaq'
+            },
+            {
+                'name': 'liu219475',
+                'password': '1212aaq'
+            },
+            {
+                'name': 'leleaishe',
+                'password': '1212aaq'
+            },
+            {
+                'name': 'haw511022',
+                'password': '1212aaq'
+            },
+            {
+                'name': 'q498937510',
+                'password': '1212aaq'
+            },
+            {
+                'name': 'wwhb70',
+                'password': '1212aaq'
+            },
+            {
+                'name': 'damujixiao',
+                'password': '1212aaq'
+            },
+            {
+                'name': 'ft40792',
+                'password': '1212aaq'
+            },
+            {
+                'name': 'kaimerry',
+                'password': '1212aaq'
+            },
+            {
+                'name': 'chenenke',
+                'password': '1212aaq'
+            },
+            {
+                'name': 'guochi918',
+                'password': '1212aaq'
+            },
+            {
+                'name': 'zcy7058619',
+                'password': '1212aaq'
+            },
+            {
+                'name': 'lcs3088',
+                'password': '1212aaq'
+            },
+            {
+                'name': 'zhangjieairh',
+                'password': '1212aaq'
+            },
+            {
+                'name': 'yan12000',
+                'password': '1212aaq'
+            },
+            {
+                'name': 'whitehcg',
+                'password': '1212aaq'
+            },
+            {
+                'name': 'aectxuen',
+                'password': '1212aaq'
+            },
+            {
+                'name': 'czh216507',
+                'password': '1212aaq'
+            },
+            {
+                'name': 'ljdrw123456',
+                'password': '1212aaq'
+            },
+            {
+                'name': 'ennoable',
+                'password': '1212aaq'
+            },
+            {
+                'name': 'longshen1915',
                 'password': '1212aaq'
             }
         ]

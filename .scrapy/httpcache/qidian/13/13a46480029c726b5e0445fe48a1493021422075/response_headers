@@ -1,0 +1,10 @@
+Server: nginx
+Date: Sat, 11 Jan 2020 02:43:29 GMT
+Content-Type: application/json;charset=UTF-8
+Via-Qds: MTAuNjMuOTEuOTQ=
+Set-Cookie: lgk=1; Domain=.qidian.com; Expires=Sat, 11-Jan-2020 02:43:38 GMT; Path=/
+Set-Cookie: loginType=4; Domain=.qidian.com; Path=/
+Set-Cookie: cmfuToken=N((z-8GrJQddE_uL16ApTnhSxZI8Iqlu7HEhp89Wkt8VjZRYqrOdd-vsr-15rzuucFS7hIESauVxC_nMbEMZsC0KGBMdqzb2HATjQlM_hN8XoGkMO5w_h2f3xxTydMHFoWlUy-y4PDN71dp4aQah9JmLZUrqcUujPGZcuqHLo0xf6cpu0pWuBKmM1YPo3_mc4xHvbFFxs2hNkw4yMR5rPdndTA32pZdGsigmHAc6Wnvbx24S-yCd5g2dEeUpQRzjLTS0; Domain=.qidian.com; Path=/
+Set-Cookie: ywkey=yw2FGKqBUpoB; Domain=.qidian.com; Path=/; HttpOnly
+Set-Cookie: appId=12; Domain=.qidian.com; Path=/; HttpOnly
+Set-Cookie: areaId=30; Domain=.qidian.com; Path=/; HttpOnly
